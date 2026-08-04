@@ -3,43 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- EDIT: Update the page title and description. -->
-  <title>Your Name | Academic Profile</title>
+  <title>Xin (Robert) Luo, Ph.D. | Information Systems Scholar</title>
   <meta
     name="description"
-    content="Academic profile of Your Name, including research, publications, teaching, and professional experience."
+    content="Academic profile of Xin (Robert) Luo, Distinguished Professor at the University of New Mexico, featuring research, publications, teaching, and editorial leadership."
   >
-  <meta name="author" content="Your Name">
-  <meta name="theme-color" content="#007DBA">
+  <meta name="author" content="Xin (Robert) Luo">
+  <meta name="theme-color" content="#007dba">
+  <link rel="canonical" href="https://xinluo.github.io/">
 
-  <!-- Optional social preview metadata. -->
-  <meta property="og:title" content="Your Name | Academic Profile">
-  <meta property="og:description" content="Research, publications, teaching, and academic experience.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://YOUR-USERNAME.github.io/">
-  <!-- <meta property="og:image" content="https://YOUR-USERNAME.github.io/assets/social-preview.jpg"> -->
+  <meta property="og:title" content="Xin (Robert) Luo, Ph.D. | Information Systems Scholar">
+  <meta
+    property="og:description"
+    content="Research in cybersecurity management, consumer privacy, strategic information systems, and online platforms."
+  >
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://xinluo.github.io/">
 
   <style>
-    /*
-      HKMU-inspired palette
-      ---------------------
-      The university publicly identifies green and blue as its logo colours.
-      These web values are accessible approximations and can be changed here.
-    */
     :root {
       --brand-blue: #007dba;
       --brand-blue-dark: #075985;
+      --brand-blue-deep: #0b3552;
       --brand-blue-soft: #eaf6fb;
       --brand-green: #78be43;
       --brand-green-dark: #3f7f22;
       --brand-green-soft: #f1f9eb;
       --ink: #17212b;
+      --ink-soft: #31414c;
       --muted: #5b6873;
       --line: #dce5ea;
       --surface: #ffffff;
       --surface-alt: #f7fafb;
-      --shadow: 0 18px 50px rgba(19, 56, 77, 0.10);
+      --shadow: 0 20px 55px rgba(19, 56, 77, 0.11);
       --radius: 18px;
       --content-width: 1120px;
       --header-height: 74px;
@@ -67,11 +63,6 @@
       text-rendering: optimizeLegibility;
     }
 
-    img {
-      display: block;
-      max-width: 100%;
-    }
-
     a {
       color: var(--brand-blue-dark);
       text-decoration-thickness: 1.5px;
@@ -90,7 +81,7 @@
     :focus-visible {
       outline: 3px solid rgba(0, 125, 186, 0.34);
       outline-offset: 3px;
-      border-radius: 4px;
+      border-radius: 5px;
     }
 
     .skip-link {
@@ -131,16 +122,16 @@
       align-items: center;
       justify-content: space-between;
       height: 100%;
-      gap: 24px;
+      gap: 22px;
     }
 
     .identity {
       display: inline-flex;
       align-items: center;
       gap: 12px;
+      min-width: 0;
       color: var(--ink);
       text-decoration: none;
-      min-width: 0;
     }
 
     .identity-mark {
@@ -153,7 +144,7 @@
       background: linear-gradient(135deg, var(--brand-green) 0 48%, var(--brand-blue) 48% 100%);
       border-radius: 12px 4px 12px 4px;
       font-size: 0.82rem;
-      font-weight: 800;
+      font-weight: 850;
       letter-spacing: 0.04em;
       box-shadow: 0 8px 22px rgba(0, 125, 186, 0.18);
     }
@@ -164,25 +155,26 @@
       line-height: 1.18;
     }
 
-    .identity-text strong {
+    .identity-text strong,
+    .identity-text small {
       overflow: hidden;
-      font-size: 0.98rem;
       white-space: nowrap;
       text-overflow: ellipsis;
     }
 
+    .identity-text strong {
+      font-size: 0.98rem;
+    }
+
     .identity-text small {
-      overflow: hidden;
       color: var(--muted);
       font-size: 0.72rem;
-      white-space: nowrap;
-      text-overflow: ellipsis;
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 4px;
+      gap: 2px;
       margin: 0;
       padding: 0;
       list-style: none;
@@ -190,11 +182,11 @@
 
     .nav-links a {
       display: block;
-      padding: 9px 10px;
+      padding: 9px 8px;
       color: #33424d;
       border-radius: 8px;
-      font-size: 0.9rem;
-      font-weight: 650;
+      font-size: 0.84rem;
+      font-weight: 700;
       text-decoration: none;
     }
 
@@ -225,10 +217,10 @@
       position: relative;
       isolation: isolate;
       overflow: hidden;
-      padding: clamp(74px, 10vw, 126px) 0 clamp(62px, 8vw, 98px);
+      padding: clamp(74px, 10vw, 124px) 0 clamp(64px, 8vw, 96px);
       background:
-        radial-gradient(circle at 88% 18%, rgba(120, 190, 67, 0.18), transparent 26%),
-        radial-gradient(circle at 8% 90%, rgba(0, 125, 186, 0.12), transparent 28%),
+        radial-gradient(circle at 88% 18%, rgba(120, 190, 67, 0.2), transparent 27%),
+        radial-gradient(circle at 8% 90%, rgba(0, 125, 186, 0.13), transparent 29%),
         linear-gradient(180deg, #ffffff 0%, #f8fbfc 100%);
       border-bottom: 1px solid var(--line);
     }
@@ -238,29 +230,29 @@
       position: absolute;
       inset: 0;
       z-index: -1;
-      opacity: 0.45;
+      opacity: 0.48;
       background-image:
         linear-gradient(rgba(0, 125, 186, 0.045) 1px, transparent 1px),
         linear-gradient(90deg, rgba(0, 125, 186, 0.045) 1px, transparent 1px);
       background-size: 32px 32px;
-      mask-image: linear-gradient(to bottom, black, transparent 86%);
+      mask-image: linear-gradient(to bottom, black, transparent 88%);
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.65fr);
+      grid-template-columns: minmax(0, 1.28fr) minmax(300px, 0.72fr);
       align-items: center;
-      gap: clamp(42px, 7vw, 90px);
+      gap: clamp(42px, 7vw, 88px);
     }
 
     .eyebrow {
       display: inline-flex;
       align-items: center;
       gap: 9px;
-      margin: 0 0 18px;
+      margin: 0 0 17px;
       color: var(--brand-blue-dark);
-      font-size: 0.8rem;
-      font-weight: 800;
+      font-size: 0.78rem;
+      font-weight: 850;
       letter-spacing: 0.1em;
       text-transform: uppercase;
     }
@@ -282,22 +274,22 @@
     }
 
     h1 {
-      max-width: 13ch;
-      margin-bottom: 18px;
-      font-size: clamp(3rem, 7vw, 5.5rem);
+      max-width: 14ch;
+      margin-bottom: 15px;
+      font-size: clamp(3rem, 6.4vw, 5.15rem);
       letter-spacing: -0.055em;
     }
 
     .hero-title {
-      max-width: 680px;
-      margin: 0 0 16px;
-      color: #2f3d47;
-      font-size: clamp(1.15rem, 2vw, 1.42rem);
-      font-weight: 650;
+      max-width: 730px;
+      margin: 0 0 18px;
+      color: var(--ink-soft);
+      font-size: clamp(1.12rem, 2vw, 1.38rem);
+      font-weight: 700;
     }
 
     .hero-summary {
-      max-width: 690px;
+      max-width: 700px;
       margin: 0 0 30px;
       color: var(--muted);
       font-size: 1.03rem;
@@ -319,7 +311,7 @@
       padding: 10px 16px;
       border: 1px solid transparent;
       border-radius: 10px;
-      font-weight: 750;
+      font-weight: 780;
       text-decoration: none;
       transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
     }
@@ -353,71 +345,95 @@
 
     .profile-card {
       position: relative;
-      padding: 18px;
-      background: rgba(255, 255, 255, 0.8);
-      border: 1px solid rgba(220, 229, 234, 0.95);
+      overflow: hidden;
+      padding: 25px;
+      background: rgba(255, 255, 255, 0.86);
+      border: 1px solid rgba(220, 229, 234, 0.98);
       border-radius: 28px 8px 28px 8px;
       box-shadow: var(--shadow);
       backdrop-filter: blur(10px);
     }
 
-    .portrait {
-      position: relative;
-      overflow: hidden;
-      aspect-ratio: 4 / 5;
-      background:
-        linear-gradient(135deg, rgba(120, 190, 67, 0.24), rgba(0, 125, 186, 0.25)),
-        #edf4f6;
-      border-radius: 20px 5px 20px 5px;
+    .profile-card::after {
+      content: "";
+      position: absolute;
+      right: -55px;
+      bottom: -60px;
+      width: 155px;
+      height: 155px;
+      background: linear-gradient(135deg, rgba(120, 190, 67, 0.16), rgba(0, 125, 186, 0.14));
+      border-radius: 50%;
     }
 
-    .portrait img,
-    .portrait-fallback {
-      width: 100%;
-      height: 100%;
-    }
-
-    .portrait img {
-      object-fit: cover;
-    }
-
-    .portrait-fallback {
+    .monogram {
       display: grid;
       place-items: center;
-      color: rgba(7, 89, 133, 0.82);
-      font-size: clamp(3.4rem, 10vw, 6rem);
-      font-weight: 850;
-      letter-spacing: -0.06em;
+      width: 78px;
+      height: 78px;
+      margin-bottom: 25px;
+      color: #fff;
+      background: linear-gradient(135deg, var(--brand-blue-dark), var(--brand-blue));
+      border-radius: 22px 7px 22px 7px;
+      font-size: 1.55rem;
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      box-shadow: 0 12px 28px rgba(0, 125, 186, 0.24);
     }
 
-    .status-chip {
-      position: absolute;
-      right: 28px;
-      bottom: 28px;
-      display: inline-flex;
+    .profile-card h2 {
+      margin-bottom: 8px;
+      font-size: 1.25rem;
+    }
+
+    .profile-card > p {
+      margin: 0 0 22px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .metrics {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      gap: 12px;
+      margin: 0;
+    }
+
+    .metric {
+      display: grid;
+      grid-template-columns: 68px 1fr;
       align-items: center;
-      gap: 8px;
-      padding: 8px 11px;
-      color: #214319;
-      background: rgba(255, 255, 255, 0.92);
-      border: 1px solid rgba(120, 190, 67, 0.45);
-      border-radius: 999px;
-      font-size: 0.78rem;
-      font-weight: 750;
-      box-shadow: 0 8px 18px rgba(19, 56, 77, 0.1);
+      gap: 14px;
+      padding-top: 12px;
+      border-top: 1px solid var(--line);
     }
 
-    .status-chip::before {
-      content: "";
-      width: 8px;
-      height: 8px;
-      background: var(--brand-green);
-      border-radius: 50%;
-      box-shadow: 0 0 0 4px rgba(120, 190, 67, 0.18);
+    .metric dt {
+      color: var(--brand-blue-dark);
+      font-size: 1.28rem;
+      font-weight: 900;
+      letter-spacing: -0.04em;
+    }
+
+    .metric dd {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.78rem;
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    .cv-note {
+      position: relative;
+      z-index: 1;
+      display: block;
+      margin-top: 17px;
+      color: var(--muted);
+      font-size: 0.7rem;
     }
 
     .section {
-      padding: clamp(72px, 9vw, 112px) 0;
+      padding: clamp(72px, 9vw, 110px) 0;
     }
 
     .section-alt {
@@ -439,7 +455,7 @@
       letter-spacing: -0.04em;
     }
 
-    .section-heading p {
+    .section-heading > p {
       max-width: 710px;
       margin: 0;
       color: var(--muted);
@@ -447,7 +463,7 @@
 
     .about-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+      grid-template-columns: minmax(0, 1.22fr) minmax(285px, 0.78fr);
       gap: 30px;
     }
 
@@ -457,7 +473,8 @@
     .publication,
     .timeline-item,
     .teaching-card,
-    .contact-card {
+    .service-card,
+    .education-card {
       background: var(--surface);
       border: 1px solid var(--line);
       border-radius: var(--radius);
@@ -471,13 +488,32 @@
       margin-top: 0;
     }
 
-    .prose-card p:last-child {
-      margin-bottom: 0;
+    .prose-card p:last-of-type {
+      margin-bottom: 25px;
     }
 
     .lead {
-      color: #2f3d47;
+      color: var(--ink-soft);
       font-size: 1.14rem;
+    }
+
+    .mini-link {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 6px 10px;
+      color: var(--brand-blue-dark);
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      font-size: 0.78rem;
+      font-weight: 760;
+      text-decoration: none;
+    }
+
+    .mini-link:hover {
+      background: var(--brand-blue-soft);
+      border-color: rgba(0, 125, 186, 0.28);
     }
 
     .info-card {
@@ -511,8 +547,8 @@
 
     .facts dt {
       color: var(--muted);
-      font-size: 0.76rem;
-      font-weight: 800;
+      font-size: 0.74rem;
+      font-weight: 850;
       letter-spacing: 0.08em;
       text-transform: uppercase;
     }
@@ -520,7 +556,7 @@
     .facts dd {
       margin: 0;
       color: var(--ink);
-      font-weight: 650;
+      font-weight: 680;
     }
 
     .research-grid {
@@ -532,7 +568,7 @@
     .research-card {
       position: relative;
       overflow: hidden;
-      min-height: 236px;
+      min-height: 280px;
       padding: 26px;
       transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
     }
@@ -563,7 +599,7 @@
       color: var(--brand-blue-dark);
       background: var(--brand-blue-soft);
       border-radius: 12px;
-      font-weight: 850;
+      font-weight: 880;
     }
 
     .research-card:nth-child(2) .research-number {
@@ -590,7 +626,7 @@
 
     .publication {
       display: grid;
-      grid-template-columns: 74px minmax(0, 1fr) auto;
+      grid-template-columns: 94px minmax(0, 1fr);
       align-items: start;
       gap: 20px;
       padding: 23px;
@@ -600,48 +636,28 @@
       display: inline-grid;
       place-items: center;
       min-height: 42px;
+      padding-inline: 8px;
       color: var(--brand-blue-dark);
       background: var(--brand-blue-soft);
       border-radius: 10px;
-      font-size: 0.86rem;
+      font-size: 0.82rem;
       font-weight: 850;
+      text-align: center;
     }
 
     .publication h3 {
       margin-bottom: 7px;
-      font-size: 1.06rem;
+      font-size: 1.04rem;
     }
 
     .publication p {
       margin: 0;
       color: var(--muted);
-      font-size: 0.93rem;
+      font-size: 0.9rem;
     }
 
-    .pub-links {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-      gap: 8px;
-    }
-
-    .mini-link {
-      display: inline-flex;
-      align-items: center;
-      min-height: 34px;
-      padding: 6px 10px;
-      color: var(--brand-blue-dark);
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      font-size: 0.78rem;
-      font-weight: 750;
-      text-decoration: none;
-    }
-
-    .mini-link:hover {
-      background: var(--brand-blue-soft);
-      border-color: rgba(0, 125, 186, 0.28);
+    .publication p + p {
+      margin-top: 3px;
     }
 
     .section-footer {
@@ -704,18 +720,47 @@
       flex: 0 0 auto;
       color: var(--brand-blue-dark);
       font-size: 0.82rem;
-      font-weight: 800;
+      font-weight: 820;
     }
 
     .timeline-org {
       margin: 0 0 9px;
       color: #35444e;
-      font-weight: 680;
+      font-weight: 700;
     }
 
     .timeline-item p:last-child {
       margin-bottom: 0;
       color: var(--muted);
+    }
+
+    .education-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .education-card {
+      padding: 21px;
+      border-top: 4px solid var(--brand-blue);
+    }
+
+    .education-card:nth-child(even) {
+      border-top-color: var(--brand-green);
+    }
+
+    .education-card .degree {
+      margin-bottom: 8px;
+      color: var(--brand-blue-dark);
+      font-size: 1rem;
+      font-weight: 850;
+    }
+
+    .education-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.85rem;
     }
 
     .teaching-grid {
@@ -741,13 +786,75 @@
     .teaching-meta {
       margin: 0 0 10px;
       color: var(--brand-blue-dark);
-      font-size: 0.84rem;
-      font-weight: 800;
+      font-size: 0.82rem;
+      font-weight: 820;
     }
 
     .teaching-card p:last-child {
       margin-bottom: 0;
       color: var(--muted);
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .service-card {
+      padding: 28px;
+    }
+
+    .service-card h3 {
+      margin-bottom: 16px;
+      font-size: 1.18rem;
+    }
+
+    .service-card ul {
+      display: grid;
+      gap: 11px;
+      margin: 0;
+      padding-left: 19px;
+      color: var(--muted);
+    }
+
+    .service-card li::marker {
+      color: var(--brand-green);
+    }
+
+    .service-card strong {
+      color: var(--ink-soft);
+    }
+
+    .impact-strip {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 22px;
+    }
+
+    .impact-item {
+      padding: 24px;
+      background: linear-gradient(135deg, var(--brand-blue-soft), #fff);
+      border: 1px solid rgba(0, 125, 186, 0.16);
+      border-radius: var(--radius);
+    }
+
+    .impact-item:nth-child(2) {
+      background: linear-gradient(135deg, var(--brand-green-soft), #fff);
+      border-color: rgba(120, 190, 67, 0.24);
+    }
+
+    .impact-item strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--brand-blue-deep);
+      font-size: 1.4rem;
+    }
+
+    .impact-item span {
+      color: var(--muted);
+      font-size: 0.88rem;
     }
 
     .contact-panel {
@@ -799,13 +906,13 @@
     .contact-panel p {
       max-width: 650px;
       margin: 0;
-      color: rgba(255, 255, 255, 0.78);
+      color: rgba(255, 255, 255, 0.79);
     }
 
     .contact-actions {
       display: grid;
       gap: 11px;
-      min-width: 210px;
+      min-width: 220px;
     }
 
     .contact-actions .button-primary {
@@ -833,12 +940,12 @@
     .site-footer {
       padding: 28px 0 36px;
       color: var(--muted);
-      font-size: 0.85rem;
+      font-size: 0.82rem;
     }
 
     .footer-wrap {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: space-between;
       gap: 24px;
       padding-top: 20px;
@@ -846,12 +953,14 @@
     }
 
     .footer-wrap p {
+      max-width: 660px;
       margin: 0;
     }
 
     .footer-links {
       display: flex;
       flex-wrap: wrap;
+      justify-content: flex-end;
       gap: 15px;
     }
 
@@ -864,7 +973,7 @@
       color: var(--brand-blue-dark);
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 980px) {
       .menu-button {
         display: inline-grid;
         place-items: center;
@@ -898,13 +1007,8 @@
         grid-template-columns: 1fr;
       }
 
-      .hero-grid {
-        gap: 54px;
-      }
-
       .profile-card {
-        width: min(100%, 420px);
-        margin-inline: auto;
+        width: min(100%, 520px);
       }
 
       .research-grid {
@@ -915,13 +1019,8 @@
         min-height: 0;
       }
 
-      .publication {
-        grid-template-columns: 64px minmax(0, 1fr);
-      }
-
-      .pub-links {
-        grid-column: 2;
-        justify-content: flex-start;
+      .education-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
       .contact-actions {
@@ -930,7 +1029,7 @@
       }
     }
 
-    @media (max-width: 640px) {
+    @media (max-width: 700px) {
       .container {
         width: min(calc(100% - 28px), var(--content-width));
       }
@@ -940,7 +1039,7 @@
       }
 
       h1 {
-        font-size: clamp(2.75rem, 15vw, 4.4rem);
+        font-size: clamp(2.7rem, 14vw, 4.2rem);
       }
 
       .hero-actions,
@@ -960,12 +1059,7 @@
 
       .pub-year {
         width: fit-content;
-        min-width: 64px;
-        padding-inline: 10px;
-      }
-
-      .pub-links {
-        grid-column: auto;
+        min-width: 76px;
       }
 
       .timeline {
@@ -978,13 +1072,19 @@
       }
 
       .teaching-grid,
+      .service-grid,
+      .education-grid,
+      .impact-strip,
       .contact-actions {
         grid-template-columns: 1fr;
       }
 
       .footer-wrap {
-        align-items: flex-start;
         flex-direction: column;
+      }
+
+      .footer-links {
+        justify-content: flex-start;
       }
     }
 
@@ -1009,12 +1109,11 @@
 
   <header class="site-header">
     <div class="container nav-wrap">
-      <!-- EDIT: Change YN to your initials and update the text. -->
-      <a class="identity" href="#top" aria-label="Go to homepage">
-        <span class="identity-mark" aria-hidden="true">YN</span>
+      <a class="identity" href="#top" aria-label="Go to the top of Xin Luo's profile">
+        <span class="identity-mark" aria-hidden="true">XL</span>
         <span class="identity-text">
-          <strong>Your Name</strong>
-          <small>Your Department · Your University</small>
+          <strong>Xin (Robert) Luo</strong>
+          <small>Anderson School of Management · University of New Mexico</small>
         </span>
       </a>
 
@@ -1037,6 +1136,7 @@
           <li><a href="#publications">Publications</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#teaching">Teaching</a></li>
+          <li><a href="#service">Service</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -1047,39 +1147,44 @@
     <section class="hero" id="top">
       <div class="container hero-grid">
         <div>
-          <p class="eyebrow">Academic profile</p>
-
-          <!-- EDIT: Replace all placeholder text in this hero section. -->
-          <h1>Your Name</h1>
+          <p class="eyebrow">Information systems scholar</p>
+          <h1>Xin (Robert) Luo, Ph.D.</h1>
           <p class="hero-title">
-            Your academic title · Your department · Your university
+            Distinguished Professor · Endowed Creative Enterprise Chair · Endowed Dean's Professor
+            of Research Excellence
           </p>
           <p class="hero-summary">
-            Add a concise two- or three-sentence introduction describing your primary research area,
-            the questions you study, and the broader impact of your work.
+            Xin Luo is a professor of MIS and Information Assurance at the University of New Mexico's
+            Anderson School of Management. His research advances cybersecurity management, consumer
+            privacy, strategic information systems, and the development of online platforms.
           </p>
 
           <div class="hero-actions">
-            <a class="button button-primary" href="#research">Explore my research</a>
-            <!-- EDIT: Add your CV file to the repository, for example assets/your-name-cv.pdf. -->
-            <a class="button button-secondary" href="assets/your-name-cv.pdf">Download CV</a>
+            <a class="button button-primary" href="#research">Explore research</a>
+            <a class="button button-secondary" href="#publications">Selected publications</a>
+            <a class="button button-secondary" href="mailto:xinluo@unm.edu">Email Xin</a>
           </div>
         </div>
 
-        <aside class="profile-card" aria-label="Profile photograph">
-          <div class="portrait">
-            <!--
-              EDIT: Put your photograph at assets/profile.jpg.
-              Until then, the initials below will appear automatically.
-            -->
-            <img
-              src="assets/profile.jpg"
-              alt="Portrait of Your Name"
-              onerror="this.hidden=true; this.nextElementSibling.hidden=false;"
-            >
-            <div class="portrait-fallback" hidden aria-hidden="true">YN</div>
-          </div>
-          <span class="status-chip">Open to collaboration</span>
+        <aside class="profile-card" aria-label="Academic profile highlights">
+          <div class="monogram" aria-hidden="true">XL</div>
+          <h2>Research profile</h2>
+          <p>Selected indicators reported in the July 2026 curriculum vitae.</p>
+          <dl class="metrics">
+            <div class="metric">
+              <dt>185</dt>
+              <dd>journal articles and special-issue editorials listed in the CV</dd>
+            </div>
+            <div class="metric">
+              <dt>65</dt>
+              <dd>Google Scholar h-index reported in the CV</dd>
+            </div>
+            <div class="metric">
+              <dt>No. 1</dt>
+              <dd>worldwide IS scholar ranking for 2022-2025, as reported in the CV</dd>
+            </div>
+          </dl>
+          <small class="cv-note">Metrics may change over time; see Google Scholar for the latest record.</small>
         </aside>
       </div>
     </section>
@@ -1089,39 +1194,48 @@
         <div class="section-heading">
           <div>
             <p class="eyebrow">About</p>
-            <h2>Research with practical relevance</h2>
+            <h2>Research with practical reach</h2>
           </div>
           <p>
-            Use this space for a one-sentence overview of your intellectual identity and the common
-            theme connecting your research, teaching, and service.
+            A career spanning information systems research, cybersecurity education, editorial
+            leadership, international programs, and doctoral mentorship.
           </p>
         </div>
 
         <div class="about-grid">
           <article class="prose-card">
-            <!-- EDIT: Replace these paragraphs with your biography. -->
             <p class="lead">
-              I am a [position] in the [department or school] at [university]. My research examines
-              [broad topic] with a particular focus on [specific questions or contexts].
+              Xin (Robert) Luo is a Distinguished Professor at the University of New Mexico's Anderson
+              School of Management, where he also serves as Endowed Creative Enterprise Chair and
+              Endowed Dean's Professor of Research Excellence.
             </p>
             <p>
-              My work draws on [theories, methods, or disciplines] to understand [research problem].
-              I am especially interested in projects that connect rigorous scholarship with
-              meaningful organizational or societal outcomes.
+              His scholarship examines how individuals and organizations make decisions in digital
+              environments. Across cybersecurity, privacy, artificial intelligence, online platforms,
+              and data-driven strategy, his work connects rigorous information systems research with
+              consequential organizational and societal challenges.
             </p>
             <p>
-              Before joining [current institution], I completed [degree] at [institution] and worked
-              on [relevant prior experience]. Add any professional certifications, industry
-              experience, or interdisciplinary background that helps readers understand your work.
+              Before joining UNM in 2008, he served on the faculty at Virginia State University. He
+              earned his Ph.D. and M.S. in Management Information Systems from Mississippi State
+              University, an MBA from the University of Louisiana, and a B.A. in International
+              Business from Sichuan Normal University.
             </p>
 
             <div class="profile-links" aria-label="Academic profile links">
-              <!-- EDIT: Replace # with your real profile links. -->
-              <a class="mini-link" href="#">Google Scholar</a>
-              <a class="mini-link" href="#">ORCID</a>
-              <a class="mini-link" href="#">ResearchGate</a>
-              <a class="mini-link" href="#">GitHub</a>
-              <a class="mini-link" href="#">LinkedIn</a>
+              <a
+                class="mini-link"
+                href="https://scholar.google.com/citations?hl=en&amp;user=FemyycMAAAAJ"
+                target="_blank"
+                rel="noopener noreferrer"
+              >Google Scholar</a>
+              <a
+                class="mini-link"
+                href="https://www.aisresearchrankings.org/rankings/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >AIS Research Rankings</a>
+              <a class="mini-link" href="mailto:xinluo@unm.edu">xinluo@unm.edu</a>
             </div>
           </article>
 
@@ -1130,23 +1244,23 @@
             <dl class="facts">
               <div>
                 <dt>Position</dt>
-                <dd>Your academic title</dd>
+                <dd>Distinguished Professor</dd>
               </div>
               <div>
                 <dt>Affiliation</dt>
-                <dd>Your school and university</dd>
+                <dd>Anderson School of Management, University of New Mexico</dd>
               </div>
               <div>
-                <dt>Research areas</dt>
-                <dd>Area one, area two, area three</dd>
+                <dt>Research</dt>
+                <dd>Cybersecurity, privacy, strategic IS, online platforms</dd>
               </div>
               <div>
-                <dt>Methods</dt>
-                <dd>Method one, method two, method three</dd>
+                <dt>Teaching</dt>
+                <dd>Security, analytics, research methods, information systems</dd>
               </div>
               <div>
                 <dt>Location</dt>
-                <dd>City, Country/Region</dd>
+                <dd>Albuquerque, New Mexico, USA</dd>
               </div>
             </dl>
           </aside>
@@ -1162,36 +1276,36 @@
             <h2>Research interests</h2>
           </div>
           <p>
-            Organize your work into three or four coherent streams. Each description should explain
-            the core problem, your perspective, and why the stream matters.
+            Three complementary streams investigate how digital technologies reshape security,
+            decision-making, markets, and organizational performance.
           </p>
         </div>
 
         <div class="research-grid">
           <article class="research-card">
             <span class="research-number">01</span>
-            <h3>Research stream one</h3>
+            <h3>Cybersecurity management and consumer privacy</h3>
             <p>
-              Describe the central phenomenon, your main research question, and the academic or
-              practical significance of this stream.
+              Examining security behavior, privacy protection, insider threats, misinformation,
+              cloud security, and the organizational consequences of security investments.
             </p>
           </article>
 
           <article class="research-card">
             <span class="research-number">02</span>
-            <h3>Research stream two</h3>
+            <h3>Strategic information systems and AI</h3>
             <p>
-              Summarize the theories, technologies, populations, or organizational settings that
-              define this part of your research programme.
+              Studying digital innovation, human-AI trust, big data capabilities, organizational
+              resilience, and the strategic use of information systems for business decisions.
             </p>
           </article>
 
           <article class="research-card">
             <span class="research-number">03</span>
-            <h3>Research stream three</h3>
+            <h3>Online platforms, markets, and reviews</h3>
             <p>
-              Explain how this stream complements the others and identify the broader challenge your
-              work aims to address.
+              Investigating live-streaming commerce, online healthcare, digital marketplaces,
+              blockchain-enabled ecosystems, metaverse engagement, and platform participation.
             </p>
           </article>
         </div>
@@ -1203,60 +1317,77 @@
         <div class="section-heading">
           <div>
             <p class="eyebrow">Publications</p>
-            <h2>Selected work</h2>
+            <h2>Selected recent work</h2>
           </div>
           <p>
-            List your most relevant publications here. Use the link buttons for the paper, DOI,
-            preprint, data, code, slides, or media coverage.
+            A sample of forthcoming and recent research from the full publication record listed in
+            the curriculum vitae.
           </p>
         </div>
 
         <div class="publication-list">
-          <!-- Duplicate a publication block for each item. -->
+          <article class="publication">
+            <span class="pub-year">Forthcoming</span>
+            <div>
+              <h3>Exploring Online Help-Seeking Tendencies: The Influence of Experience Type and Helper Identity</h3>
+              <p><strong>Xin (Robert) Luo</strong>, Shaobo (Kevin) Li, Xun (Irene) Huang, Le Wang, and Yuwei Jiang.</p>
+              <p><em>MIS Quarterly</em>.</p>
+            </div>
+          </article>
+
+          <article class="publication">
+            <span class="pub-year">Forthcoming</span>
+            <div>
+              <h3>Transferring, Eliminating, or Both? The Strategic Impact of Resale Platforms and Consumer Learning on Coping with Consumer Uncertainty</h3>
+              <p><strong>Xin (Robert) Luo</strong>, Yongjian Li, Yusheng Wang, and Xuanming Bai.</p>
+              <p><em>Information Systems Research</em>.</p>
+            </div>
+          </article>
+
+          <article class="publication">
+            <span class="pub-year">Forthcoming</span>
+            <div>
+              <h3>Give AI a Second Chance: Unraveling How User Feedback Repairs Trust in Human-Large Language Models Interaction</h3>
+              <p><strong>Xin (Robert) Luo</strong>, Xusen Cheng, and Tianzi Wang.</p>
+              <p><em>Journal of the Association for Information Systems</em>.</p>
+            </div>
+          </article>
+
           <article class="publication">
             <span class="pub-year">2026</span>
             <div>
-              <h3>Title of your journal article, conference paper, or working paper</h3>
-              <p><strong>Your Name</strong>, Coauthor Name, and Coauthor Name.</p>
-              <p><em>Journal or Conference Name</em>. Volume(Issue), pages. Status or award.</p>
-            </div>
-            <div class="pub-links">
-              <a class="mini-link" href="#">Paper</a>
-              <a class="mini-link" href="#">DOI</a>
-              <a class="mini-link" href="#">Code</a>
+              <h3>Investigating the Cross-Channel Impact of Live Streaming on Retail Sales: Evidence from a Live Streaming E-Commerce Platform in China</h3>
+              <p><strong>Xin (Robert) Luo</strong>, Lixia Hu, Jiahui Mo, and Qingfei Min.</p>
+              <p><em>Decision Support Systems</em>, 201, 114591.</p>
             </div>
           </article>
 
           <article class="publication">
             <span class="pub-year">2025</span>
             <div>
-              <h3>Title of another publication or manuscript</h3>
-              <p>Coauthor Name, <strong>Your Name</strong>, and Coauthor Name.</p>
-              <p><em>Journal or Conference Name</em>. Add publication details or manuscript status.</p>
-            </div>
-            <div class="pub-links">
-              <a class="mini-link" href="#">Paper</a>
-              <a class="mini-link" href="#">Slides</a>
+              <h3>Beyond Money: Incentive Effects of Tokenized Ownership on User Contribution in DAOs</h3>
+              <p><strong>Xin (Robert) Luo</strong>, Kun Chen, and Yuling Fang.</p>
+              <p><em>Journal of Operations Management</em>, 71(7), 988-1016.</p>
             </div>
           </article>
 
           <article class="publication">
-            <span class="pub-year">2024</span>
+            <span class="pub-year">2025</span>
             <div>
-              <h3>Title of a representative earlier publication</h3>
-              <p><strong>Your Name</strong> and Coauthor Name.</p>
-              <p><em>Journal or Conference Name</em>. Add volume, issue, pages, or award details.</p>
-            </div>
-            <div class="pub-links">
-              <a class="mini-link" href="#">Paper</a>
-              <a class="mini-link" href="#">Data</a>
+              <h3>Unlocking the Power of User Tie Strength: A Multi-Study on Cross-Platform Content Sharing Behaviors</h3>
+              <p><strong>Xin (Robert) Luo</strong>, Jie Su, Han Li, and Haowen Xiao.</p>
+              <p><em>Journal of the Association for Information Systems</em>, 26(5), 1457-1484.</p>
             </div>
           </article>
         </div>
 
         <div class="section-footer">
-          <!-- EDIT: Link to a complete publications page or Google Scholar. -->
-          <a class="button button-secondary" href="#">View all publications</a>
+          <a
+            class="button button-secondary"
+            href="https://scholar.google.com/citations?hl=en&amp;user=FemyycMAAAAJ"
+            target="_blank"
+            rel="noopener noreferrer"
+          >View the full Google Scholar profile</a>
         </div>
       </div>
     </section>
@@ -1266,47 +1397,80 @@
         <div class="section-heading">
           <div>
             <p class="eyebrow">Experience</p>
-            <h2>Appointments and education</h2>
+            <h2>Academic appointments and education</h2>
           </div>
           <p>
-            Use this timeline for academic appointments, education, industry roles, visiting
-            positions, or other major career milestones.
+            More than two decades of research, teaching, and academic leadership across management
+            information systems and information assurance.
           </p>
         </div>
 
         <div class="timeline">
           <article class="timeline-item">
             <div class="timeline-topline">
-              <h3>Your current academic position</h3>
-              <span class="timeline-date">2026–Present</span>
+              <h3>Distinguished Professor and Endowed Chair</h3>
+              <span class="timeline-date">2024-Present</span>
             </div>
-            <p class="timeline-org">Department or School · University Name</p>
+            <p class="timeline-org">Anderson School of Management · University of New Mexico</p>
             <p>
-              Add a short description of your role, lab, research group, leadership responsibilities,
-              or primary activities.
+              Distinguished Professor since 2024, Endowed Creative Enterprise Chair since 2025,
+              and Endowed Dean's Professor of Research Excellence since 2022.
             </p>
           </article>
 
           <article class="timeline-item">
             <div class="timeline-topline">
-              <h3>PhD or previous academic position</h3>
-              <span class="timeline-date">2022–2026</span>
+              <h3>MIS and Information Assurance Faculty</h3>
+              <span class="timeline-date">2008-2024</span>
             </div>
-            <p class="timeline-org">Discipline · University Name</p>
+            <p class="timeline-org">Anderson School of Management · University of New Mexico</p>
             <p>
-              Dissertation title, supervisors, research focus, honors, or selected accomplishments.
+              Progressed from Assistant Professor to Associate Professor with tenure and Full
+              Professor with tenure; also directed international programs from 2018 to 2024.
             </p>
           </article>
 
           <article class="timeline-item">
             <div class="timeline-topline">
-              <h3>Earlier degree or professional role</h3>
-              <span class="timeline-date">2019–2022</span>
+              <h3>Assistant Professor of Computer Information Systems</h3>
+              <span class="timeline-date">2006-2008</span>
             </div>
-            <p class="timeline-org">Institution or Organization</p>
+            <p class="timeline-org">School of Business · Virginia State University</p>
             <p>
-              Add only the details that help readers understand your expertise and research path.
+              Taught information systems security, management information systems, programming,
+              and the CIS capstone.
             </p>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-topline">
+              <h3>Graduate teaching and research appointments</h3>
+              <span class="timeline-date">2000-2006</span>
+            </div>
+            <p class="timeline-org">Mississippi State University · University of Louisiana</p>
+            <p>
+              Served as an instructor, graduate teaching assistant, graduate research assistant,
+              and webmaster while completing graduate study.
+            </p>
+          </article>
+        </div>
+
+        <div class="education-grid" aria-label="Education">
+          <article class="education-card">
+            <p class="degree">Ph.D. · 2007</p>
+            <p>Management Information Systems<br>Mississippi State University</p>
+          </article>
+          <article class="education-card">
+            <p class="degree">M.S. · 2004</p>
+            <p>Management Information Systems<br>Mississippi State University</p>
+          </article>
+          <article class="education-card">
+            <p class="degree">MBA · 2003</p>
+            <p>Business Administration<br>University of Louisiana</p>
+          </article>
+          <article class="education-card">
+            <p class="degree">B.A. · 1999</p>
+            <p>International Business<br>Sichuan Normal University</p>
           </article>
         </div>
       </div>
@@ -1317,46 +1481,100 @@
         <div class="section-heading">
           <div>
             <p class="eyebrow">Teaching</p>
-            <h2>Courses and mentoring</h2>
+            <h2>Courses and doctoral education</h2>
           </div>
           <p>
-            Present courses you have taught, assisted, designed, or guest lectured. You can also add
-            supervision, mentoring, and teaching philosophy information.
+            Teaching spans undergraduate, graduate, doctoral, executive, and faculty-development
+            settings in the United States and internationally.
           </p>
         </div>
 
         <div class="teaching-grid">
           <article class="teaching-card">
-            <h3>Course title one</h3>
-            <p class="teaching-meta">Instructor · Undergraduate · Fall 2026</p>
+            <h3>Cybersecurity and privacy</h3>
+            <p class="teaching-meta">Undergraduate · Graduate · Faculty workshop</p>
             <p>
-              Briefly describe the course topics, format, signature assignment, or your contribution.
+              Information Systems Security, Advanced Security Analytics, and Information Systems
+              Security Management.
             </p>
           </article>
 
           <article class="teaching-card">
-            <h3>Course title two</h3>
-            <p class="teaching-meta">Teaching Assistant · Graduate · Spring 2026</p>
+            <h3>Research and analytics</h3>
+            <p class="teaching-meta">Graduate · Doctoral</p>
             <p>
-              Briefly describe your instructional role, tutorial topics, assessment design, or labs.
+              Graduate Research Thesis, research methods and analytics, and Social Media Analytics
+              for doctoral students.
             </p>
           </article>
 
           <article class="teaching-card">
-            <h3>Course title three</h3>
-            <p class="teaching-meta">Guest Lecturer · Executive Education · 2025</p>
+            <h3>Information systems and development</h3>
+            <p class="teaching-meta">Undergraduate · Graduate</p>
             <p>
-              Add the lecture theme, audience, and any distinctive experiential or applied elements.
+              Management of Information Systems, Business Application Development, Web Application
+              Development, and Web Scripting Programming and Development using Python.
             </p>
           </article>
 
           <article class="teaching-card">
-            <h3>Student supervision</h3>
-            <p class="teaching-meta">Research mentoring · Ongoing</p>
+            <h3>Executive and international learning</h3>
+            <p class="teaching-meta">Executive MBA · International residency</p>
             <p>
-              Describe the types of student projects you supervise and the topics you welcome.
+              Practicum courses, independent research, international residency, and cross-cultural
+              business education.
             </p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="service">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Leadership</p>
+            <h2>Editorial service and research impact</h2>
+          </div>
+          <p>
+            Current and recent leadership roles support the information systems community through
+            journals, conferences, research funding, and doctoral development.
+          </p>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card">
+            <h3>Selected editorial leadership</h3>
+            <ul>
+              <li><strong>Senior Editor</strong>, Journal of the Association for Information Systems, since July 2025</li>
+              <li><strong>Senior Editor</strong>, Decision Support Systems, since 2025</li>
+              <li><strong>Senior Editor</strong>, Internet Research, since 2025</li>
+              <li><strong>Co-Editor-in-Chief</strong>, International Journal of Accounting &amp; Information Management, since 2016</li>
+              <li><strong>Editorial Review Board</strong>, Information Systems Research, 2023-2025</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <h3>Selected honors and service</h3>
+            <ul>
+              <li><strong>Best Reviewer Award</strong>, Workshop on e-Business, 2024</li>
+              <li><strong>Outstanding Associate Editor Award</strong>, Journal of the Association for Information Systems, 2023</li>
+              <li><strong>Best Associate Editor Award</strong>, International Conference on Information Systems, 2021</li>
+              <li><strong>Research Excellence Awards</strong>, Anderson School of Management, since 2022</li>
+              <li><strong>NSF review service</strong>, Secure and Trustworthy Cyberspace expert panel, 2014-2016</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="impact-strip" aria-label="Selected externally funded research">
+          <div class="impact-item">
+            <strong>$3.35M NSA initiative</strong>
+            <span>Sub-PI for cybersecurity education innovation and faculty development, 2020-2022.</span>
+          </div>
+          <div class="impact-item">
+            <strong>$1.67M NSF grant</strong>
+            <span>Key personnel for the Scholarship for Service information assurance program, 2013-2022.</span>
+          </div>
         </div>
       </div>
     </section>
@@ -1366,17 +1584,16 @@
         <div class="contact-panel">
           <div>
             <p class="eyebrow">Contact</p>
-            <h2>Let’s connect</h2>
+            <h2>Connect with Xin</h2>
             <p>
-              Add a short invitation for research collaboration, student inquiries, speaking requests,
-              or other academic opportunities.
+              For research collaboration, academic inquiries, and speaking opportunities, contact
+              Xin Luo at the Anderson School of Management in Albuquerque, New Mexico.
             </p>
           </div>
 
           <div class="contact-actions">
-            <!-- EDIT: Replace the email address and links. -->
-            <a class="button button-primary" href="mailto:your.name@university.edu">Email me</a>
-            <a class="button button-secondary" href="#">LinkedIn</a>
+            <a class="button button-primary" href="mailto:xinluo@unm.edu">xinluo@unm.edu</a>
+            <a class="button button-secondary" href="tel:+15052778875">(505) 277-8875</a>
           </div>
         </div>
       </div>
@@ -1385,70 +1602,105 @@
 
   <footer class="site-footer">
     <div class="container footer-wrap">
-      <p>© <span id="year"></span> Your Name. Built with HTML and hosted on GitHub Pages.</p>
+      <p>
+        © <span id="year"></span> Xin (Robert) Luo. Profile details are based on the July 2026
+        curriculum vitae. Hosted on GitHub Pages.
+      </p>
       <div class="footer-links">
         <a href="#top">Back to top</a>
-        <a href="mailto:your.name@university.edu">Email</a>
-        <a href="#">GitHub</a>
+        <a href="mailto:xinluo@unm.edu">Email</a>
+        <a
+          href="https://scholar.google.com/citations?hl=en&amp;user=FemyycMAAAAJ"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Google Scholar</a>
       </div>
     </div>
   </footer>
 
   <script>
-    const menuButton = document.querySelector('.menu-button');
-    const navLinks = document.querySelector('.nav-links');
-    const sectionLinks = [...document.querySelectorAll('.nav-links a')];
+    const menuButton = document.querySelector(".menu-button");
+    const navLinks = document.querySelector(".nav-links");
+    const sectionLinks = Array.from(document.querySelectorAll(".nav-links a"));
     const sections = sectionLinks
-      .map((link) => document.querySelector(link.getAttribute('href')))
+      .map(function (link) {
+        return document.querySelector(link.getAttribute("href"));
+      })
       .filter(Boolean);
 
-    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-    menuButton.addEventListener('click', () => {
-      const isOpen = navLinks.dataset.open === 'true';
+    menuButton.addEventListener("click", function () {
+      const isOpen = navLinks.dataset.open === "true";
       navLinks.dataset.open = String(!isOpen);
-      menuButton.setAttribute('aria-expanded', String(!isOpen));
-      menuButton.setAttribute('aria-label', isOpen ? 'Open navigation menu' : 'Close navigation menu');
+      menuButton.setAttribute("aria-expanded", String(!isOpen));
+      menuButton.setAttribute(
+        "aria-label",
+        isOpen ? "Open navigation menu" : "Close navigation menu"
+      );
     });
 
-    sectionLinks.forEach((link) => {
-      link.addEventListener('click', () => {
-        navLinks.dataset.open = 'false';
-        menuButton.setAttribute('aria-expanded', 'false');
-        menuButton.setAttribute('aria-label', 'Open navigation menu');
+    sectionLinks.forEach(function (link) {
+      link.addEventListener("click", function () {
+        navLinks.dataset.open = "false";
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.setAttribute("aria-label", "Open navigation menu");
       });
     });
 
-    // Highlight the section currently visible in the viewport.
-    if ('IntersectionObserver' in window) {
+    if ("IntersectionObserver" in window) {
       const observer = new IntersectionObserver(
-        (entries) => {
+        function (entries) {
           const visible = entries
-            .filter((entry) => entry.isIntersecting)
-            .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+            .filter(function (entry) {
+              return entry.isIntersecting;
+            })
+            .sort(function (a, b) {
+              return b.intersectionRatio - a.intersectionRatio;
+            })[0];
 
           if (!visible) return;
 
-          sectionLinks.forEach((link) => {
-            const isCurrent = link.getAttribute('href') === `#${visible.target.id}`;
+          sectionLinks.forEach(function (link) {
+            const isCurrent = link.getAttribute("href") === "#" + visible.target.id;
             if (isCurrent) {
-              link.setAttribute('aria-current', 'true');
+              link.setAttribute("aria-current", "true");
             } else {
-              link.removeAttribute('aria-current');
+              link.removeAttribute("aria-current");
             }
           });
         },
-        { rootMargin: '-30% 0px -55% 0px', threshold: [0.05, 0.25, 0.6] }
+        { rootMargin: "-30% 0px -55% 0px", threshold: [0.05, 0.25, 0.6] }
       );
 
-      sections.forEach((section) => observer.observe(section));
+      sections.forEach(function (section) {
+        observer.observe(section);
+      });
     }
   </script>
 
-  <!--
-    OPTIONAL: Add structured data after replacing all placeholders.
-    See schema.org/Person for suitable fields such as name, affiliation,
-    sameAs, alumniOf, and jobTitle.
-  -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Xin (Robert) Luo",
+      "honorificSuffix": "Ph.D.",
+      "jobTitle": "Distinguished Professor",
+      "email": "mailto:xinluo@unm.edu",
+      "telephone": "+1-505-277-8875",
+      "url": "https://xinluo.github.io/",
+      "worksFor": {
+        "@type": "CollegeOrUniversity",
+        "name": "The University of New Mexico"
+      },
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Anderson School of Management"
+      },
+      "sameAs": [
+        "https://scholar.google.com/citations?hl=en&user=FemyycMAAAAJ"
+      ]
+    }
+  </script>
 </body>
 </html>

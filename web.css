@@ -2,3 +2,12 @@
 --brand-blue-dark: #075985;
 --brand-green: #78be43;
 --brand-green-dark: #3f7f22;
+
+.profile-photo {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  margin-bottom: 24px;
+  object-fit: cover;
+  object-position: center 20%;
+  border-radius: 22px 7px 22px 7px;
+}

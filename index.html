@@ -217,7 +217,7 @@
       position: relative;
       isolation: isolate;
       overflow: hidden;
-      padding: clamp(74px, 10vw, 124px) 0 clamp(64px, 8vw, 96px);
+      padding: clamp(36px, 5vw, 64px) 0 clamp(64px, 8vw, 96px);
       background:
         radial-gradient(circle at 88% 18%, rgba(120, 190, 67, 0.2), transparent 27%),
         radial-gradient(circle at 8% 90%, rgba(0, 125, 186, 0.13), transparent 29%),
@@ -241,8 +241,43 @@
     .hero-grid {
       display: grid;
       grid-template-columns: minmax(0, 1.28fr) minmax(300px, 0.72fr);
-      align-items: center;
-      gap: clamp(42px, 7vw, 88px);
+      align-items: stretch;
+      column-gap: clamp(28px, 5vw, 64px);
+      row-gap: clamp(36px, 5vw, 56px);
+    }
+
+    .profile-photo-frame {
+      position: relative;
+      min-width: 0;
+      min-height: 520px;
+      overflow: hidden;
+      background: var(--surface-alt);
+      border: 1px solid rgba(220, 229, 234, 0.98);
+      border-radius: 8px 28px 8px 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .profile-photo {
+      display: block;
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 28%;
+    }
+
+    .hero-copy {
+      grid-column: 1 / -1;
+      min-width: 0;
+      width: 100%;
+      max-width: none;
+    }
+
+    .hero-copy h1,
+    .hero-copy .hero-title,
+    .hero-copy .hero-summary {
+      max-width: none;
     }
 
     .eyebrow {
@@ -345,6 +380,7 @@
 
     .profile-card {
       position: relative;
+      min-width: 0;
       overflow: hidden;
       padding: 25px;
       background: rgba(255, 255, 255, 0.86);
@@ -1000,15 +1036,18 @@
         padding: 11px 12px;
       }
 
-      .hero-grid,
       .about-grid,
       .section-heading,
       .contact-panel {
         grid-template-columns: 1fr;
       }
 
+      .hero-grid {
+        grid-template-columns: minmax(0, 1fr) minmax(280px, 0.8fr);
+      }
+
       .profile-card {
-        width: min(100%, 520px);
+        width: 100%;
       }
 
       .research-grid {
@@ -1032,6 +1071,22 @@
     @media (max-width: 700px) {
       .container {
         width: min(calc(100% - 28px), var(--content-width));
+      }
+
+      .hero-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+      }
+
+      .hero-copy {
+        grid-column: auto;
+        margin-top: 10px;
+      }
+
+      .profile-photo-frame {
+        min-height: 0;
+        height: auto;
+        aspect-ratio: 4 / 3;
       }
 
       .identity-text small {
@@ -1147,7 +1202,39 @@
   <main id="main-content">
     <section class="hero" id="top">
       <div class="container hero-grid">
-        <div>
+        <div class="profile-photo-frame">
+          <img
+            class="profile-photo"
+            src="assets/Robert_Luo_2026.jpg"
+            alt="Portrait of Xin (Robert) Luo"
+          >
+        </div>
+
+        <aside class="profile-card" aria-label="Academic profile highlights">
+          <h2>Research profile</h2>
+          <p>Selected indicators reported in the July 2026 curriculum vitae.</p>
+          <dl class="metrics">
+            <div class="metric">
+              <dt>185</dt>
+              <dd>journal articles and special-issue editorials</dd>
+            </div>
+            <div class="metric">
+              <dt>65</dt>
+              <dd>Google Scholar h-index</dd>
+            </div>
+            <div class="metric">
+              <dt>No. 1</dt>
+              <dd>worldwide IS scholar ranking for 2022-2025</dd>
+            </div>
+            <div class="metric">
+              <dt>Top 2%</dt>
+              <dd>World’s Top 2% Scientist Ranking List Published by Stanford University and Elsevier</dd>
+            </div>
+          </dl>
+          <small class="cv-note">Metrics may change over time; see Google Scholar for the latest record.</small>
+        </aside>
+
+        <div class="hero-copy">
           <p class="eyebrow">Information systems scholar</p>
           <h1>Dr. Xin (Robert) Luo</h1>
           <p class="hero-title">
@@ -1165,31 +1252,6 @@
             <a class="button button-secondary" href="#publications">Selected publications</a>
           </div>
         </div>
-
-        <aside class="profile-card" aria-label="Academic profile highlights">
-          <img
-            class="profile-photo"
-            src="assets/Robert_Luo_2026.jpg"
-            //alt="Portrait of Xin (Robert) Luo"
-          >
-          <h2>Research profile</h2>
-          <p>Selected indicators reported in the July 2026 curriculum vitae.</p>
-          <dl class="metrics">
-            <div class="metric">
-              <dt>185</dt>
-              <dd>journal articles and special-issue editorials</dd>
-            </div>
-            <div class="metric">
-              <dt>65</dt>
-              <dd>Google Scholar h-index</dd>
-            </div>
-            <div class="metric">
-              <dt>No. 1</dt>
-              <dd>worldwide IS scholar ranking for 2022-2025</dd>
-            </div>
-          </dl>
-          <small class="cv-note">Metrics may change over time; see Google Scholar for the latest record.</small>
-        </aside>
       </div>
     </section>
 

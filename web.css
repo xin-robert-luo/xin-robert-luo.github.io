@@ -3,11 +3,11 @@
 --brand-green: #78be43;
 --brand-green-dark: #3f7f22;
 
-.profile-photo {
-  width: 100%;
+.about-photo {
+  width: min(100%, 300px);
   aspect-ratio: 4 / 5;
-  margin-bottom: 24px;
   object-fit: cover;
-  object-position: center 20%;
-  border-radius: 22px 7px 22px 7px;
+  object-position: 80% 30%;
+  border-radius: 24px 7px 24px 7px;
+  box-shadow: 0 18px 45px rgba(19, 56, 77, 0.14);
 }

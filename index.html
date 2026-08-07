@@ -6,7 +6,9 @@
   <title>Dr. Xin (Robert) Luo | Information Systems Scholar</title>
   <meta
     name="description"
-    content="Academic profile of Xin (Robert) Luo, Distinguished Professor at the University of New Mexico, featuring research, publications, teaching, and editorial leadership."
+    content="Academic profile of Xin (Robert) Luo, Dean of Lee Shau Kee School of Business and Administration, 
+    Chair Professor of Management Information Systems at the Hong Kong Metropolitan University's Lee Shau Kee 
+    School of Business and Administration, featuring research, publications, teaching, and editorial leadership."
   >
   <meta name="author" content="Xin (Robert) Luo">
   <meta name="theme-color" content="#007dba">
@@ -378,6 +380,19 @@
       box-shadow: 0 10px 22px rgba(19, 56, 77, 0.08);
     }
 
+    .button-accent {
+      color: var(--brand-green-dark);
+      background: var(--brand-green-soft);
+      border-color: rgba(120, 190, 67, 0.42);
+    }
+
+    .button-accent:hover {
+      color: #fff;
+      background: var(--brand-green-dark);
+      border-color: var(--brand-green-dark);
+      box-shadow: 0 10px 22px rgba(63, 127, 34, 0.18);
+    }
+
     .profile-card {
       position: relative;
       min-width: 0;
@@ -478,34 +493,26 @@
     }
 
     .section-heading {
-      display: grid;
-      grid-template-columns: minmax(220px, 0.56fr) minmax(0, 1fr);
-      align-items: end;
-      gap: 32px;
       margin-bottom: 42px;
     }
 
     .section-heading h2 {
+      max-width: none;
       margin-bottom: 0;
       font-size: clamp(2rem, 4.4vw, 3.1rem);
       letter-spacing: -0.04em;
     }
 
-    .section-heading > p {
-      max-width: 710px;
-      margin: 0;
-      color: var(--muted);
-    }
-
-    .about-grid {
+    .about-research-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.22fr) minmax(285px, 0.78fr);
-      gap: 30px;
+      grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+      align-items: stretch;
+      gap: 24px;
     }
 
     .prose-card,
-    .info-card,
-    .research-card,
+    .research-focus-panel,
+    .venue-panel,
     .publication,
     .timeline-item,
     .teaching-card,
@@ -526,6 +533,24 @@
 
     .prose-card p:last-of-type {
       margin-bottom: 25px;
+    }
+
+    .about-story {
+      position: relative;
+      overflow: hidden;
+      border-top: 5px solid var(--brand-blue);
+      background:
+        radial-gradient(circle at 100% 0%, rgba(0, 125, 186, 0.1), transparent 32%),
+        var(--surface);
+    }
+
+    .about-story > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .about-story p {
+      max-width: 72ch;
     }
 
     .lead {
@@ -552,107 +577,132 @@
       border-color: rgba(0, 125, 186, 0.28);
     }
 
-    .info-card {
-      align-self: start;
-      padding: 26px;
-      border-top: 5px solid var(--brand-green);
-    }
-
-    .info-card h3 {
-      margin-bottom: 18px;
-      font-size: 1.2rem;
-    }
-
-    .facts {
-      display: grid;
-      gap: 17px;
-      margin: 0;
-    }
-
-    .facts div {
-      display: grid;
-      gap: 2px;
-      padding-bottom: 15px;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .facts div:last-child {
-      padding-bottom: 0;
-      border-bottom: 0;
-    }
-
-    .facts dt {
+    .venue-label {
+      display: block;
+      margin-bottom: 7px;
       color: var(--muted);
-      font-size: 0.74rem;
+      font-size: 0.7rem;
       font-weight: 850;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.09em;
       text-transform: uppercase;
     }
 
-    .facts dd {
-      margin: 0;
-      color: var(--ink);
-      font-weight: 680;
-    }
-
-    .research-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 20px;
-    }
-
-    .research-card {
+    .research-focus-panel {
       position: relative;
       overflow: hidden;
-      min-height: 280px;
-      padding: 26px;
-      transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+      padding: clamp(24px, 4vw, 34px);
+      border-top: 5px solid var(--brand-green);
+      background:
+        radial-gradient(circle at 100% 0%, rgba(120, 190, 67, 0.13), transparent 34%),
+        var(--surface);
     }
 
-    .research-card::after {
-      content: "";
-      position: absolute;
-      right: -30px;
-      bottom: -34px;
-      width: 112px;
-      height: 112px;
-      background: linear-gradient(135deg, rgba(120, 190, 67, 0.18), rgba(0, 125, 186, 0.15));
-      border-radius: 50%;
+    .research-focus-panel h3 {
+      margin-bottom: 8px;
+      font-size: clamp(1.35rem, 2.4vw, 1.8rem);
+      letter-spacing: -0.025em;
     }
 
-    .research-card:hover {
-      transform: translateY(-5px);
-      border-color: rgba(0, 125, 186, 0.3);
-      box-shadow: 0 20px 44px rgba(19, 56, 77, 0.09);
+    .research-focus-list {
+      display: grid;
+      gap: 10px;
+      margin: 24px 0 0;
+      padding: 0;
+      list-style: none;
     }
 
-    .research-number {
-      display: inline-grid;
+    .research-focus-list li {
+      display: grid;
+      grid-template-columns: 44px minmax(0, 1fr);
+      align-items: center;
+      gap: 14px;
+      min-height: 64px;
+      padding: 9px 14px 9px 9px;
+      background: rgba(255, 255, 255, 0.84);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+    }
+
+    .research-focus-number {
+      display: grid;
       place-items: center;
-      width: 42px;
-      height: 42px;
-      margin-bottom: 23px;
+      width: 44px;
+      height: 44px;
       color: var(--brand-blue-dark);
       background: var(--brand-blue-soft);
-      border-radius: 12px;
-      font-weight: 880;
+      border-radius: 10px;
+      font-size: 0.78rem;
+      font-weight: 900;
     }
 
-    .research-card:nth-child(2) .research-number {
+    .research-focus-list li:nth-child(even) .research-focus-number {
       color: var(--brand-green-dark);
       background: var(--brand-green-soft);
     }
 
-    .research-card h3 {
-      margin-bottom: 10px;
-      font-size: 1.18rem;
+    .research-focus-list strong {
+      color: var(--ink);
+      font-size: 0.94rem;
+      line-height: 1.35;
     }
 
-    .research-card p {
+    .venue-panel {
       position: relative;
-      z-index: 1;
+      overflow: hidden;
+      margin-top: 24px;
+      padding: clamp(24px, 4vw, 36px);
+      border-top: 5px solid var(--brand-blue);
+      background:
+        radial-gradient(circle at 96% 8%, rgba(120, 190, 67, 0.12), transparent 26%),
+        var(--surface);
+    }
+
+    .venue-heading {
+      display: grid;
+      grid-template-columns: minmax(230px, 0.7fr) minmax(0, 1.3fr);
+      align-items: end;
+      gap: 32px;
+    }
+
+    .venue-heading h3 {
+      margin: 0;
+      font-size: clamp(1.45rem, 2.5vw, 2rem);
+      letter-spacing: -0.025em;
+    }
+
+    .venue-heading p {
       margin: 0;
       color: var(--muted);
+    }
+
+    .journal-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0 24px;
+      margin: 26px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .journal-grid li {
+      position: relative;
+      padding: 12px 8px 12px 20px;
+      color: var(--ink-soft);
+      border-top: 1px solid var(--line);
+      font-size: 0.9rem;
+      font-weight: 680;
+      line-height: 1.4;
+    }
+
+    .journal-grid li::before {
+      content: "";
+      position: absolute;
+      top: 19px;
+      left: 2px;
+      width: 7px;
+      height: 7px;
+      background: var(--brand-green);
+      border-radius: 50%;
     }
 
     .publication-list {
@@ -684,6 +734,18 @@
     .publication h3 {
       margin-bottom: 7px;
       font-size: 1.04rem;
+    }
+
+    .publication h3 a {
+      color: var(--ink);
+      text-decoration-color: rgba(0, 125, 186, 0.42);
+      text-decoration-thickness: 1.5px;
+      text-underline-offset: 3px;
+    }
+
+    .publication h3 a:hover {
+      color: var(--brand-blue-dark);
+      text-decoration-color: var(--brand-green);
     }
 
     .publication p {
@@ -933,7 +995,7 @@
     }
 
     .contact-panel h2 {
-      max-width: 14ch;
+      max-width: 20ch;
       margin-bottom: 15px;
       font-size: clamp(2.1rem, 5vw, 3.7rem);
       letter-spacing: -0.045em;
@@ -1036,8 +1098,7 @@
         padding: 11px 12px;
       }
 
-      .about-grid,
-      .section-heading,
+      .about-research-grid,
       .contact-panel {
         grid-template-columns: 1fr;
       }
@@ -1050,12 +1111,14 @@
         width: 100%;
       }
 
-      .research-grid {
+      .venue-heading {
         grid-template-columns: 1fr;
+        align-items: start;
+        gap: 10px;
       }
 
-      .research-card {
-        min-height: 0;
+      .journal-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
       .education-grid {
@@ -1105,6 +1168,10 @@
 
       .button {
         width: 100%;
+      }
+
+      .journal-grid {
+        grid-template-columns: minmax(0, 1fr);
       }
 
       .publication {
@@ -1169,7 +1236,6 @@
         <span class="identity-text">
           <strong>Dr. Xin (Robert) Luo</strong>
           <small>Lee Shau Kee School of Business and Administration · Hong Kong Metropolitan University</small>
-          <small>Anderson School of Management · University of New Mexico</small>
         </span>
       </a>
 
@@ -1187,12 +1253,11 @@
 
       <nav aria-label="Primary navigation">
         <ul class="nav-links" id="primary-navigation" data-open="false">
-          <li><a href="#about">About</a></li>
-          <li><a href="#research">Research</a></li>
+          <li><a href="#about">About &amp; Research</a></li>
           <li><a href="#publications">Publications</a></li>
+          <li><a href="#service">Service</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#teaching">Teaching</a></li>
-          <li><a href="#service">Service</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -1228,7 +1293,14 @@
             </div>
             <div class="metric">
               <dt>Top 2%</dt>
-              <dd>World’s Top 2% Scientist Ranking List Published by Stanford University and Elsevier</dd>
+              <dd>
+                <a
+                  href="https://elsevier.digitalcommonsdata.com/datasets/btchxktzyw/8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >World’s Top 2% Scientist Ranking List</a>
+                Published by Stanford University and Elsevier
+              </dd>
             </div>
           </dl>
           <small class="cv-note">Metrics may change over time; see Google Scholar for the latest record.</small>
@@ -1250,130 +1322,105 @@
           <div class="hero-actions">
             <a class="button button-primary" href="#research">Explore research</a>
             <a class="button button-secondary" href="#publications">Selected publications</a>
+            <a
+              class="button button-accent"
+              href="assets/XinLuo-Full_CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Curriculum vitae</a>
+            <a
+              class="button button-accent"
+              href="https://scholar.google.com/citations?hl=en&amp;user=FemyycMAAAAJ"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Google Scholar</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="about">
+    <section class="section section-alt" id="about">
       <div class="container">
         <div class="section-heading">
-          <div>
-            <p class="eyebrow">About</p>
-            <h2>Research with practical reach</h2>
-          </div>
-          <p>
-            A career spanning information systems research, cybersecurity education, editorial
-            leadership, international programs, and doctoral mentorship.
-          </p>
+          <p class="eyebrow">About &amp; Research</p>
+          <h2>Leadership and inquiry across digital business</h2>
         </div>
 
-        <div class="about-grid">
-          <article class="prose-card">
-            <p class="lead">
-              Xin (Robert) Luo is a Distinguished Professor at the University of New Mexico's Anderson
-              School of Management, where he also serves as Endowed Creative Enterprise Chair and
-              Endowed Dean's Professor of Research Excellence.
+        <div class="about-research-grid">
+          <article class="prose-card about-story">
+            <p>
+              Dr. Xin (Robert) Luo is Dean of the Lee Shau Kee School of Business and Administration
+              and Chair Professor of Management Information Systems at Hong Kong Metropolitan
+              University in Hong Kong SAR, China. He is ranked No.1 worldwide for publication in the 
+              AIS Senior Scholars List of Premier Journals, including ISR, MISQ, JMIS, JAIS, EJIS, 
+              ISJ, JIT, JSIS, DSS, I&M, and I&O, for 2023-2025 and 2022-2024. Additionally, he has 
+              been listed in the Top 2% Global Scientists list published by Stanford University and 
+              Elsevier. 
             </p>
             <p>
-              His scholarship examines how individuals and organizations make decisions in digital
-              environments. Across cybersecurity, privacy, artificial intelligence, online platforms,
-              and data-driven strategy, his work connects rigorous information systems research with
-              consequential organizational and societal challenges.
+              His research interests center around behavioral information systems security management, 
+              consumer privacy protection, E-commerce/M-commerce, social commerce, innovative 
+              technologies (e.g., blockchain, machine vs. human interactions, cloud computing, 
+              green IS, e-healthcare, social network, etc.) for business strategic decision-making 
+              and development, and cross-cultural IT management. Before joining academia, he had 
+              worked as business associate, web project manager, assistant director, and senior web 
+              developer. He has received grants from NSA and NSF.
             </p>
-            <p>
-              Before joining UNM in 2008, he served on the faculty at Virginia State University. He
-              earned his Ph.D. and M.S. in Management Information Systems from Mississippi State
-              University, an MBA from the University of Louisiana, and a B.A. in International
-              Business from Sichuan Normal University.
-            </p>
-
-            <div class="profile-links" aria-label="Academic profile links">
-              <a
-                class="mini-link"
-                href="https://scholar.google.com/citations?hl=en&amp;user=FemyycMAAAAJ"
-                target="_blank"
-                rel="noopener noreferrer"
-              >Google Scholar</a>
-              <a
-                class="mini-link"
-                href="https://www.aisresearchrankings.org/rankings/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >AIS Research Rankings</a>
-              <a class="mini-link" href="mailto:xinluo@unm.edu">xinluo@unm.edu</a>
-            </div>
           </article>
 
-          <aside class="info-card">
-            <h3>At a glance</h3>
-            <dl class="facts">
-              <div>
-                <dt>Position</dt>
-                <dd>Distinguished Professor</dd>
-              </div>
-              <div>
-                <dt>Affiliation</dt>
-                <dd>Anderson School of Management, University of New Mexico</dd>
-              </div>
-              <div>
-                <dt>Research</dt>
-                <dd>Cybersecurity, privacy, strategic IS, online platforms</dd>
-              </div>
-              <div>
-                <dt>Teaching</dt>
-                <dd>Security, analytics, research methods, information systems</dd>
-              </div>
-              <div>
-                <dt>Location</dt>
-                <dd>Albuquerque, New Mexico, USA</dd>
-              </div>
-            </dl>
+          <aside class="research-focus-panel" id="research" aria-labelledby="research-focus-title">
+            <span class="venue-label">Research agenda</span>
+            <h3 id="research-focus-title">Four areas of focus</h3>
+            <ol class="research-focus-list">
+              <li>
+                <span class="research-focus-number" aria-hidden="true">01</span>
+                <strong>Behavioral IS security management</strong>
+              </li>
+              <li>
+                <span class="research-focus-number" aria-hidden="true">02</span>
+                <strong>Consumer privacy and digital commerce</strong>
+              </li>
+              <li>
+                <span class="research-focus-number" aria-hidden="true">03</span>
+                <strong>Emerging technologies for business</strong>
+              </li>
+              <li>
+                <span class="research-focus-number" aria-hidden="true">04</span>
+                <strong>Strategic and cross-cultural IT management</strong>
+              </li>
+            </ol>
           </aside>
         </div>
-      </div>
-    </section>
 
-    <section class="section section-alt" id="research">
-      <div class="container">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">Research</p>
-            <h2>Research interests</h2>
+        <div class="venue-panel">
+          <div class="venue-heading">
+            <div>
+              <span class="venue-label">Selected publication venues</span>
+              <h3>Published across leading journals</h3>
+            </div>
+            <p>
+              His research articles have appeared in leading business, information systems,
+              operations, security, and engineering journals.
+            </p>
           </div>
-          <p>
-            Three complementary streams investigate how digital technologies reshape security,
-            decision-making, markets, and organizational performance.
-          </p>
-        </div>
 
-        <div class="research-grid">
-          <article class="research-card">
-            <span class="research-number">01</span>
-            <h3>Cybersecurity management and consumer privacy</h3>
-            <p>
-              Examining security behavior, privacy protection, insider threats, misinformation,
-              cloud security, and the organizational consequences of security investments.
-            </p>
-          </article>
-
-          <article class="research-card">
-            <span class="research-number">02</span>
-            <h3>Strategic information systems and AI</h3>
-            <p>
-              Studying digital innovation, human-AI trust, big data capabilities, organizational
-              resilience, and the strategic use of information systems for business decisions.
-            </p>
-          </article>
-
-          <article class="research-card">
-            <span class="research-number">03</span>
-            <h3>Online platforms, markets, and reviews</h3>
-            <p>
-              Investigating live-streaming commerce, online healthcare, digital marketplaces,
-              blockchain-enabled ecosystems, metaverse engagement, and platform participation.
-            </p>
-          </article>
+          <ul class="journal-grid">
+            <li><em>Information Systems Research</em></li>
+            <li><em>MIS Quarterly</em></li>
+            <li><em>Journal of Operations Management</em></li>
+            <li><em>Production and Operations Management</em></li>
+            <li><em>Journal of Management Information Systems</em></li>
+            <li><em>Journal of the Association for Information Systems</em></li>
+            <li><em>European Journal of Information Systems</em></li>
+            <li><em>Information Systems Journal</em></li>
+            <li><em>Journal of Strategic Information Systems</em></li>
+            <li><em>Journal of Information Technology</em></li>
+            <li><em>Decision Sciences</em></li>
+            <li><em>Decision Support Systems</em></li>
+            <li><em>Information &amp; Management</em></li>
+            <li><em>Computers &amp; Security</em></li>
+            <li><em>IEEE Transactions on Engineering Management</em></li>
+          </ul>
         </div>
       </div>
     </section>
@@ -1381,68 +1428,98 @@
     <section class="section" id="publications">
       <div class="container">
         <div class="section-heading">
-          <div>
-            <p class="eyebrow">Publications</p>
-            <h2>Selected recent work</h2>
-          </div>
-          <p>
-            A sample of forthcoming and recent research from the full publication record listed in
-            the curriculum vitae.
-          </p>
+          <p class="eyebrow">Publications</p>
+          <h2>Selected recent work</h2>
         </div>
 
         <div class="publication-list">
           <article class="publication">
             <span class="pub-year">Forthcoming</span>
             <div>
-              <h3>Exploring Online Help-Seeking Tendencies: The Influence of Experience Type and Helper Identity</h3>
-              <p><strong>Xin (Robert) Luo</strong>, Shaobo (Kevin) Li, Xun (Irene) Huang, Le Wang, and Yuwei Jiang.</p>
-              <p><em>MIS Quarterly</em>.</p>
+              <h3>
+                <a href="https://doi.org/10.25300/MISQ/2025/19133" target="_blank" rel="noopener noreferrer">Exploring Online Help-Seeking Tendencies: The Influence of Experience Type and Helper Identity</a>
+              </h3>
+              <p><strong><em>MIS Quarterly</em></strong> · With Shaobo Li, Xun Huang, Le Wang, and Yuwei Jiang.</p>
             </div>
           </article>
 
           <article class="publication">
             <span class="pub-year">Forthcoming</span>
             <div>
-              <h3>Transferring, Eliminating, or Both? The Strategic Impact of Resale Platforms and Consumer Learning on Coping with Consumer Uncertainty</h3>
-              <p><strong>Xin (Robert) Luo</strong>, Yongjian Li, Yusheng Wang, and Xuanming Bai.</p>
-              <p><em>Information Systems Research</em>.</p>
+              <h3>
+                <a href="https://pubsonline.informs.org/doi/abs/10.1287/isre.2023.0659" target="_blank" rel="noopener noreferrer">Transferring, Eliminating, or Both? The Strategic Impact of Resale Platforms and Consumer Learning on Coping with Consumer Uncertainty</a>
+              </h3>
+              <p><strong><em>Information Systems Research</em></strong> · With Yongjian Li, Yusheng Wang, and Xuanmin Bai.</p>
             </div>
           </article>
 
           <article class="publication">
             <span class="pub-year">Forthcoming</span>
             <div>
-              <h3>Give AI a Second Chance: Unraveling How User Feedback Repairs Trust in Human-Large Language Models Interaction</h3>
-              <p><strong>Xin (Robert) Luo</strong>, Xusen Cheng, and Tianzi Wang.</p>
-              <p><em>Journal of the Association for Information Systems</em>.</p>
+              <h3>
+                <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6049654" target="_blank" rel="noopener noreferrer">When More is Better (or Not): Cybersecurity Investment, Financial Risk, and Board Experience Heterogeneity</a>
+              </h3>
+              <p><strong><em>Journal of Management Information Systems</em></strong> · With Niyanta Sookraj, Yen-Yao Wang, and Chenhui Guo.</p>
+            </div>
+          </article>
+
+          <article class="publication">
+            <span class="pub-year">Forthcoming</span>
+            <div>
+              <h3>
+                <a href="https://aisel.aisnet.org/jais_preprints/245/" target="_blank" rel="noopener noreferrer">The Dilemma of Giving: Unveiling a Two-Stage Donation Mechanism in Online Charitable Crowdfunding</a>
+              </h3>
+              <p><strong><em>Journal of the Association for Information Systems</em></strong> · With Chundong Zheng, Shuqin Liu, Huan Liu, and Xueyang Feng.</p>
+            </div>
+          </article>
+
+          <article class="publication">
+            <span class="pub-year">Forthcoming</span>
+            <div>
+              <h3>
+                <a href="https://doi.org/10.1177/10591478251399020" target="_blank" rel="noopener noreferrer">Unraveling the Transformative Effects of Online Healthcare Consultation Services on Outpatient and Inpatient Costs</a>
+              </h3>
+              <p><strong><em>Production and Operations Management</em></strong> · With Hualong Yang, Le Wang, and Le Wang.</p>
             </div>
           </article>
 
           <article class="publication">
             <span class="pub-year">2026</span>
             <div>
-              <h3>Investigating the Cross-Channel Impact of Live Streaming on Retail Sales: Evidence from a Live Streaming E-Commerce Platform in China</h3>
-              <p><strong>Xin (Robert) Luo</strong>, Lixia Hu, Jiahui Mo, and Qingfei Min.</p>
-              <p><em>Decision Support Systems</em>, 201, 114591.</p>
+              <h3>
+                <a href="https://www.tandfonline.com/doi/abs/10.1080/07421222.2025.2602399" target="_blank" rel="noopener noreferrer">Digital Innovation as an Outcome and a Process: The Juxtaposed Effects on Firm Performance</a>
+              </h3>
+              <p><strong><em>Journal of Management Information Systems</em></strong> · With Hui Peng and Yaobin Lu · Vol. 43, Issue 1, 2026.</p>
             </div>
           </article>
 
           <article class="publication">
             <span class="pub-year">2025</span>
             <div>
-              <h3>Beyond Money: Incentive Effects of Tokenized Ownership on User Contribution in DAOs</h3>
-              <p><strong>Xin (Robert) Luo</strong>, Kun Chen, and Yuling Fang.</p>
-              <p><em>Journal of Operations Management</em>, 71(7), 988-1016.</p>
+              <h3>
+                <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/joom.1351" target="_blank" rel="noopener noreferrer">Beyond Money: Incentive Effects of Tokenized Ownership on User Contribution in DAOs</a>
+              </h3>
+              <p><strong><em>Journal of Operations Management</em></strong> · With Kun Chen and Yulin Fang · Vol. 71, Issue 7, pp. 988–1016, 2025.</p>
             </div>
           </article>
 
           <article class="publication">
             <span class="pub-year">2025</span>
             <div>
-              <h3>Unlocking the Power of User Tie Strength: A Multi-Study on Cross-Platform Content Sharing Behaviors</h3>
-              <p><strong>Xin (Robert) Luo</strong>, Jie Su, Han Li, and Haowen Xiao.</p>
-              <p><em>Journal of the Association for Information Systems</em>, 26(5), 1457-1484.</p>
+              <h3>
+                <a href="https://journals.sagepub.com/doi/abs/10.1177/10591478241310224" target="_blank" rel="noopener noreferrer">Revisiting Seller Reputation: Impact of Internal and External Reputation on Sales in Online Knowledge Payment Markets</a>
+              </h3>
+              <p><strong><em>Production and Operations Management</em></strong> · With Xusen Cheng and Liangfei Qiu · Vol. 34, Issue 8, pp. 2180–2198, 2025.</p>
+            </div>
+          </article>
+
+          <article class="publication">
+            <span class="pub-year">2025</span>
+            <div>
+              <h3>
+                <a href="https://pubsonline.informs.org/doi/abs/10.1287/isre.2023.0179" target="_blank" rel="noopener noreferrer">Win by Hook or Crook? Self-injecting Favorable Online Reviews to Fight Adjacent Rivals</a>
+              </h3>
+              <p><strong><em>Information Systems Research</em></strong> · With Le Wang, Liangfei Qiu, Feng Xu, and Xueying Cui · Vol. 36, Issue 3, pp. 1269–1947, 2025.</p>
             </div>
           </article>
         </div>
@@ -1458,20 +1535,70 @@
       </div>
     </section>
 
-    <section class="section section-alt" id="experience">
+    <section class="section section-alt" id="service">
       <div class="container">
         <div class="section-heading">
-          <div>
-            <p class="eyebrow">Experience</p>
-            <h2>Academic appointments and education</h2>
+          <p class="eyebrow">Service</p>
+          <h2>Editorial service and research impact</h2>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card">
+            <h3>Selected editorial leadership</h3>
+            <ul>
+              <li><strong>Senior Editor</strong>, Journal of the Association for Information Systems, since July 2025</li>
+              <li><strong>Senior Editor</strong>, Decision Support Systems, since 2025</li>
+              <li><strong>Senior Editor</strong>, Internet Research, since 2025</li>
+              <li><strong>Co-Editor-in-Chief</strong>, International Journal of Accounting &amp; Information Management, since 2016</li>
+              <li><strong>Editorial Review Board</strong>, Information Systems Research, 2023-2025</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <h3>Selected honors and service</h3>
+            <ul>
+              <li><strong>Best Reviewer Award</strong>, Workshop on e-Business, 2024</li>
+              <li><strong>Outstanding Associate Editor Award</strong>, Journal of the Association for Information Systems, 2023</li>
+              <li><strong>Best Associate Editor Award</strong>, International Conference on Information Systems, 2021</li>
+              <li><strong>Research Excellence Awards</strong>, Anderson School of Management, since 2022</li>
+              <li><strong>NSF review service</strong>, Secure and Trustworthy Cyberspace expert panel, 2014-2016</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="impact-strip" aria-label="Selected externally funded research">
+          <div class="impact-item">
+            <strong>$3.35M NSA initiative</strong>
+            <span>Sub-PI for cybersecurity education innovation and faculty development, 2020-2022.</span>
           </div>
-          <p>
-            More than two decades of research, teaching, and academic leadership across management
-            information systems and information assurance.
-          </p>
+          <div class="impact-item">
+            <strong>$1.67M NSF grant</strong>
+            <span>Key personnel for the Scholarship for Service information assurance program, 2013-2022.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Experience</p>
+          <h2>Academic appointments and education</h2>
         </div>
 
         <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-topline">
+              <h3>Dean of Lee Shau Kee School of Business and Administration</h3>
+              <span class="timeline-date">2026-Present</span>
+            </div>
+            <p class="timeline-org">Hong Kong Metropolitan University</p>
+            <p>
+              Chair Professor of Management Information Systems, Lee Shau Kee School of Business
+              and Administration.
+            </p>
+          </article>
+
           <article class="timeline-item">
             <div class="timeline-topline">
               <h3>Distinguished Professor and Endowed Chair</h3>
@@ -1542,17 +1669,11 @@
       </div>
     </section>
 
-    <section class="section" id="teaching">
+    <section class="section section-alt" id="teaching">
       <div class="container">
         <div class="section-heading">
-          <div>
-            <p class="eyebrow">Teaching</p>
-            <h2>Courses and doctoral education</h2>
-          </div>
-          <p>
-            Teaching spans undergraduate, graduate, doctoral, executive, and faculty-development
-            settings in the United States and internationally.
-          </p>
+          <p class="eyebrow">Teaching</p>
+          <h2>Courses and doctoral education</h2>
         </div>
 
         <div class="teaching-grid">
@@ -1595,71 +1716,15 @@
       </div>
     </section>
 
-    <section class="section section-alt" id="service">
-      <div class="container">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">Leadership</p>
-            <h2>Editorial service and research impact</h2>
-          </div>
-          <p>
-            Current and recent leadership roles support the information systems community through
-            journals, conferences, research funding, and doctoral development.
-          </p>
-        </div>
-
-        <div class="service-grid">
-          <article class="service-card">
-            <h3>Selected editorial leadership</h3>
-            <ul>
-              <li><strong>Senior Editor</strong>, Journal of the Association for Information Systems, since July 2025</li>
-              <li><strong>Senior Editor</strong>, Decision Support Systems, since 2025</li>
-              <li><strong>Senior Editor</strong>, Internet Research, since 2025</li>
-              <li><strong>Co-Editor-in-Chief</strong>, International Journal of Accounting &amp; Information Management, since 2016</li>
-              <li><strong>Editorial Review Board</strong>, Information Systems Research, 2023-2025</li>
-            </ul>
-          </article>
-
-          <article class="service-card">
-            <h3>Selected honors and service</h3>
-            <ul>
-              <li><strong>Best Reviewer Award</strong>, Workshop on e-Business, 2024</li>
-              <li><strong>Outstanding Associate Editor Award</strong>, Journal of the Association for Information Systems, 2023</li>
-              <li><strong>Best Associate Editor Award</strong>, International Conference on Information Systems, 2021</li>
-              <li><strong>Research Excellence Awards</strong>, Anderson School of Management, since 2022</li>
-              <li><strong>NSF review service</strong>, Secure and Trustworthy Cyberspace expert panel, 2014-2016</li>
-            </ul>
-          </article>
-        </div>
-
-        <div class="impact-strip" aria-label="Selected externally funded research">
-          <div class="impact-item">
-            <strong>$3.35M NSA initiative</strong>
-            <span>Sub-PI for cybersecurity education innovation and faculty development, 2020-2022.</span>
-          </div>
-          <div class="impact-item">
-            <strong>$1.67M NSF grant</strong>
-            <span>Key personnel for the Scholarship for Service information assurance program, 2013-2022.</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section class="section" id="contact">
       <div class="container">
         <div class="contact-panel">
           <div>
             <p class="eyebrow">Contact</p>
-            <h2>Connect with Xin</h2>
-            <p>
-              For research collaboration, academic inquiries, and speaking opportunities, contact
-              Xin Luo at the Anderson School of Management in Albuquerque, New Mexico.
-            </p>
+            <h2>Connect with Dr. Luo</h2>
           </div>
-
           <div class="contact-actions">
-            <a class="button button-primary" href="mailto:xinluo@unm.edu">xinluo@unm.edu</a>
-            <a class="button button-secondary" href="tel:+15052778875">(505) 277-8875</a>
+            <a class="button button-primary" href="mailto:rluo@hkmu.edu.hk ">rluo@hkmu.edu.hk</a>
           </div>
         </div>
       </div>
@@ -1674,7 +1739,7 @@
       </p>
       <div class="footer-links">
         <a href="#top">Back to top</a>
-        <a href="mailto:xinluo@unm.edu">Email</a>
+        <a href="mailto:rluo@hkmu.edu.hk">Email</a>
         <a
           href="https://scholar.google.com/citations?hl=en&amp;user=FemyycMAAAAJ"
           target="_blank"
@@ -1751,17 +1816,16 @@
       "@type": "Person",
       "name": "Xin (Robert) Luo",
       "honorificSuffix": "Ph.D.",
-      "jobTitle": "Distinguished Professor",
-      "email": "mailto:xinluo@unm.edu",
-      "telephone": "+1-505-277-8875",
+      "jobTitle": "Dean of Lee Shau Kee School of Business and Administrationand and Chair Professor of Management Information Systems",
+      "email": "mailto:rluo@hkmu.edu.hk",
       "url": "https://xinluo.github.io/",
       "worksFor": {
         "@type": "CollegeOrUniversity",
-        "name": "The University of New Mexico"
+        "name": "Hong Kong Metropolitan University"
       },
       "affiliation": {
         "@type": "Organization",
-        "name": "Anderson School of Management"
+        "name": "Lee Shau Kee School of Business and Administration"
       },
       "sameAs": [
         "https://scholar.google.com/citations?hl=en&user=FemyycMAAAAJ"

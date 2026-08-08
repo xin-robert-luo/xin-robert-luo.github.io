@@ -745,11 +745,16 @@
       text-decoration-color: rgba(0, 125, 186, 0.42);
       text-decoration-thickness: 1.5px;
       text-underline-offset: 3px;
+      overflow-wrap: anywhere;
     }
 
     .publication h3 a:hover {
       color: var(--brand-blue-dark);
       text-decoration-color: var(--brand-green);
+    }
+
+    .publication > div {
+      min-width: 0;
     }
 
     .publication p {
@@ -1105,8 +1110,33 @@
     }
 
     @media (max-width: 700px) {
+      :root {
+        --header-height: 88px;
+      }
+
       .container {
         width: min(calc(100% - 28px), var(--content-width));
+      }
+
+      .site-header {
+        height: auto;
+        min-height: var(--header-height);
+      }
+
+      .nav-wrap {
+        min-height: var(--header-height);
+        height: auto;
+        padding-block: 8px;
+        gap: 12px;
+      }
+
+      .identity {
+        flex: 1 1 auto;
+        gap: 10px;
+      }
+
+      .menu-button {
+        flex: 0 0 42px;
       }
 
       .hero-grid {
@@ -1126,8 +1156,18 @@
         aspect-ratio: auto;
       }
 
+      .identity-text strong {
+        font-size: 0.9rem;
+      }
+
       .identity-text small {
-        display: none;
+        display: block;
+        overflow: visible;
+        color: var(--muted);
+        font-size: 0.64rem;
+        line-height: 1.25;
+        white-space: normal;
+        text-overflow: clip;
       }
 
       h1 {
@@ -1435,29 +1475,17 @@
             <span class="pub-year">Forthcoming</span>
             <div>
               <h3>
-                <a href="https://doi.org/10.25300/MISQ/2025/19133" target="_blank" rel="noopener noreferrer">Exploring Online Help-Seeking Tendencies: The Influence of Experience Type and Helper Identity</a>
-              </h3>
-              <p><strong><em>MIS Quarterly</em></strong> · With Shaobo Li, Xun Huang, Le Wang, and Yuwei Jiang.</p>
-            </div>
-          </article>
-
-          <article class="publication">
-            <span class="pub-year">Forthcoming</span>
-            <div>
-              <h3>
-                <a href="https://pubsonline.informs.org/doi/abs/10.1287/isre.2023.0659" target="_blank" rel="noopener noreferrer">Transferring, Eliminating, or Both? The Strategic Impact of Resale Platforms and Consumer Learning on Coping with Consumer Uncertainty</a>
-              </h3>
-              <p><strong><em>Information Systems Research</em></strong> · With Yongjian Li, Yusheng Wang, and Xuanmin Bai.</p>
-            </div>
-          </article>
-
-          <article class="publication">
-            <span class="pub-year">Forthcoming</span>
-            <div>
-              <h3>
                 <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6049654" target="_blank" rel="noopener noreferrer">When More is Better (or Not): Cybersecurity Investment, Financial Risk, and Board Experience Heterogeneity</a>
               </h3>
-              <p><strong><em>Journal of Management Information Systems</em></strong> · With Niyanta Sookraj, Yen-Yao Wang, and Chenhui Guo.</p>
+              <p><strong><em>Journal of Management Information Systems</em></strong> &middot; With Niyanta Sookraj, Yen-Yao Wang, and Chenhui Guo.</p>
+            </div>
+          </article>
+
+          <article class="publication">
+            <span class="pub-year">Forthcoming</span>
+            <div>
+              <h3>Give AI a Second Chance: Unraveling How User Feedback Repairs Trust in Human&ndash;Large Language Models Interaction</h3>
+              <p><strong><em>Journal of the Association for Information Systems</em></strong> &middot; With Xusen Cheng and Tianzi Wang.</p>
             </div>
           </article>
 
@@ -1467,17 +1495,27 @@
               <h3>
                 <a href="https://aisel.aisnet.org/jais_preprints/245/" target="_blank" rel="noopener noreferrer">The Dilemma of Giving: Unveiling a Two-Stage Donation Mechanism in Online Charitable Crowdfunding</a>
               </h3>
-              <p><strong><em>Journal of the Association for Information Systems</em></strong> · With Chundong Zheng, Shuqin Liu, Huan Liu, and Xueyang Feng.</p>
+              <p><strong><em>Journal of the Association for Information Systems</em></strong> &middot; With Chundong Zheng, Shuqin Liu, Huan Liu, and Xueyang Feng.</p>
             </div>
           </article>
 
           <article class="publication">
-            <span class="pub-year">Forthcoming</span>
+            <span class="pub-year">2026</span>
             <div>
               <h3>
-                <a href="https://doi.org/10.1177/10591478251399020" target="_blank" rel="noopener noreferrer">Unraveling the Transformative Effects of Online Healthcare Consultation Services on Outpatient and Inpatient Costs</a>
+                <a href="https://doi.org/10.25300/MISQ/2025/19133" target="_blank" rel="noopener noreferrer">Exploring Online Help-Seeking Tendencies: The Influence of Experience Type and Help Provider Type</a>
               </h3>
-              <p><strong><em>Production and Operations Management</em></strong> · With Hualong Yang, Le Wang, and Le Wang.</p>
+              <p><strong><em>MIS Quarterly</em></strong> &middot; With Shaobo Li, Xun Huang, Le Wang, and Yuwei Jiang &middot; Vol. 50, Issue 1, pp. 327&ndash;350.</p>
+            </div>
+          </article>
+
+          <article class="publication">
+            <span class="pub-year">2026</span>
+            <div>
+              <h3>
+                <a href="https://pubsonline.informs.org/doi/abs/10.1287/isre.2023.0659" target="_blank" rel="noopener noreferrer">Transferring, Eliminating, or Both? The Strategic Impact of Resale Platforms and Consumer Learning on Coping with Consumer Uncertainty</a>
+              </h3>
+              <p><strong><em>Information Systems Research</em></strong> &middot; With Yongjian Li, Yusheng Wang, and Xuanming Bai &middot; Vol. 37, Issue 2, pp. 886&ndash;903.</p>
             </div>
           </article>
 
@@ -1487,7 +1525,17 @@
               <h3>
                 <a href="https://www.tandfonline.com/doi/abs/10.1080/07421222.2025.2602399" target="_blank" rel="noopener noreferrer">Digital Innovation as an Outcome and a Process: The Juxtaposed Effects on Firm Performance</a>
               </h3>
-              <p><strong><em>Journal of Management Information Systems</em></strong> · With Hui Peng and Yaobin Lu · Vol. 43, Issue 1, 2026.</p>
+              <p><strong><em>Journal of Management Information Systems</em></strong> &middot; With Hui Peng and Yaobin Lu &middot; Vol. 43, Issue 1, pp. 142&ndash;171.</p>
+            </div>
+          </article>
+
+          <article class="publication">
+            <span class="pub-year">2026</span>
+            <div>
+              <h3>
+                <a href="https://journals.sagepub.com/doi/10.1177/10591478251399020" target="_blank" rel="noopener noreferrer">Unraveling the Transformative Effects of Online Healthcare Consultation Services on Outpatient and Inpatient Costs</a>
+              </h3>
+              <p><strong><em>Production and Operations Management</em></strong> &middot; With Hualong Yang, Le Wang, and Le Wang &middot; Vol. 35, Issue 6, pp. 2128&ndash;2145.</p>
             </div>
           </article>
 
@@ -1495,9 +1543,9 @@
             <span class="pub-year">2025</span>
             <div>
               <h3>
-                <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/joom.1351" target="_blank" rel="noopener noreferrer">Beyond Money: Incentive Effects of Tokenized Ownership on User Contribution in DAOs</a>
+                <a href="https://aisel.aisnet.org/jais/vol26/iss5/3/" target="_blank" rel="noopener noreferrer">Unlocking the Power of User Tie Strength: A Multistudy on Cross-Platform Content Sharing Behaviors</a>
               </h3>
-              <p><strong><em>Journal of Operations Management</em></strong> · With Kun Chen and Yulin Fang · Vol. 71, Issue 7, pp. 988–1016, 2025.</p>
+              <p><strong><em>Journal of the Association for Information Systems</em></strong> &middot; With Jie Su, Han Li, and Haowen Xiao &middot; Vol. 26, Issue 5, pp. 1457&ndash;1484.</p>
             </div>
           </article>
 
@@ -1505,9 +1553,9 @@
             <span class="pub-year">2025</span>
             <div>
               <h3>
-                <a href="https://journals.sagepub.com/doi/abs/10.1177/10591478241310224" target="_blank" rel="noopener noreferrer">Revisiting Seller Reputation: Impact of Internal and External Reputation on Sales in Online Knowledge Payment Markets</a>
+                <a href="https://pubsonline.informs.org/doi/10.1287/isre.2023.0179" target="_blank" rel="noopener noreferrer">Win by Hook or Crook? Self-Injecting Favorable Online Reviews to Fight Adjacent Rivals</a>
               </h3>
-              <p><strong><em>Production and Operations Management</em></strong> · With Xusen Cheng and Liangfei Qiu · Vol. 34, Issue 8, pp. 2180–2198, 2025.</p>
+              <p><strong><em>Information Systems Research</em></strong> &middot; With Le Wang, Liangfei Qiu, Feng Xu, and Xueying Cui &middot; Vol. 36, Issue 3, pp. 1333&ndash;1353.</p>
             </div>
           </article>
 
@@ -1515,9 +1563,129 @@
             <span class="pub-year">2025</span>
             <div>
               <h3>
-                <a href="https://pubsonline.informs.org/doi/abs/10.1287/isre.2023.0179" target="_blank" rel="noopener noreferrer">Win by Hook or Crook? Self-injecting Favorable Online Reviews to Fight Adjacent Rivals</a>
+                <a href="https://journals.sagepub.com/doi/10.1111/poms.13974" target="_blank" rel="noopener noreferrer">The Categorical Paradoxes in the Sharing Economy: Empirical Evidence from Airbnb</a>
               </h3>
-              <p><strong><em>Information Systems Research</em></strong> · With Le Wang, Liangfei Qiu, Feng Xu, and Xueying Cui · Vol. 36, Issue 3, pp. 1269–1947, 2025.</p>
+              <p><strong><em>Production and Operations Management</em></strong> &middot; With Yuxin Huang, Yi Shen, and Fujun Lai &middot; Vol. 34, Issue 12, pp. 3793&ndash;3813.</p>
+            </div>
+          </article>
+
+          <article class="publication">
+            <span class="pub-year">2025</span>
+            <div>
+              <h3>
+                <a href="https://onlinelibrary.wiley.com/doi/10.1002/joom.1351" target="_blank" rel="noopener noreferrer">Beyond Money: Incentive Effects of Tokenized Ownership on User Contribution in DAOs</a>
+              </h3>
+              <p><strong><em>Journal of Operations Management</em></strong> &middot; With Kun Chen, Yifan Fan, and Yulin Fang &middot; Vol. 71, Issue 7, pp. 988&ndash;1016.</p>
+            </div>
+          </article>
+
+          <article class="publication">
+            <span class="pub-year">2025</span>
+            <div>
+              <h3>
+                <a href="https://journals.sagepub.com/doi/10.1177/10591478241310224" target="_blank" rel="noopener noreferrer">Revisiting Seller Reputation: Impact of Internal and External Reputation on Sales in Online Knowledge Payment Markets</a>
+              </h3>
+              <p><strong><em>Production and Operations Management</em></strong> &middot; With Xusen Cheng, Yue Jin, Yue Xu, and Liangfei Qiu &middot; Vol. 34, Issue 8, pp. 2180&ndash;2198.</p>
+            </div>
+          </article>
+
+          <article class="publication">
+            <span class="pub-year">2024</span>
+            <div>
+              <h3>
+                <a href="https://aisel.aisnet.org/jais/vol25/iss6/7/" target="_blank" rel="noopener noreferrer">Contextual Integrity and Personal Health Information Sharing in Online Social Networks</a>
+              </h3>
+              <p><strong><em>Journal of the Association for Information Systems</em></strong> &middot; With Han Li, Rathindra Sarathy, and Heng Xu &middot; Vol. 25, Issue 6, pp. 1500&ndash;1532.</p>
+            </div>
+          </article>
+
+          <article class="publication">
+            <span class="pub-year">2024</span>
+            <div>
+              <h3>
+                <a href="https://aisel.aisnet.org/jais/vol25/iss2/6/" target="_blank" rel="noopener noreferrer">Qualitative Cusp Catastrophe Multi-Agent Simulation Model to Explore Abrupt Changes in Online Impulsive Buying Behavior</a>
+              </h3>
+              <p><strong><em>Journal of the Association for Information Systems</em></strong> &middot; With Xiaochao Wei and Yanfei Zhang &middot; Vol. 25, Issue 2, pp. 304&ndash;340.</p>
+            </div>
+          </article>
+
+          <article class="publication">
+            <span class="pub-year">2023</span>
+            <div>
+              <h3>
+                <a href="https://pubsonline.informs.org/doi/abs/10.1287/isre.2022.1127" target="_blank" rel="noopener noreferrer">Moving Consumers from Free to Fee in Platform-Based Markets: An Empirical Study of Multiplayer Online Battle Arena Games</a>
+              </h3>
+              <p><strong><em>Information Systems Research</em></strong> &middot; With Le Wang, Paul Benjamin Lowry, and Han Li &middot; Vol. 34, Issue 1, pp. 275&ndash;296.</p>
+            </div>
+          </article>
+
+          <article class="publication">
+            <span class="pub-year">2023</span>
+            <div>
+              <h3>
+                <a href="https://aisel.aisnet.org/jais/vol24/iss2/3/" target="_blank" rel="noopener noreferrer">Be Together, Run More: Enhancing Group Participation in Fitness Technology</a>
+              </h3>
+              <p><strong><em>Journal of the Association for Information Systems</em></strong> &middot; With Zilong Liu, Xuequn Wang, Xiaolong Song, Na Liu, and Yuan Zhang &middot; Vol. 24, Issue 2, pp. 530&ndash;554.</p>
+            </div>
+          </article>
+
+          <article class="publication">
+            <span class="pub-year">2022</span>
+            <div>
+              <h3>
+                <a href="https://www.tandfonline.com/doi/abs/10.1080/07421222.2022.2063557" target="_blank" rel="noopener noreferrer">Does Techno-Invasion Lead to Employees&rsquo; Deviant Behaviors?</a>
+              </h3>
+              <p><strong><em>Journal of Management Information Systems</em></strong> &middot; With Yang Chen, Xin Wang, Jose Benitez, and Dechao Li &middot; Vol. 39, Issue 2, pp. 454&ndash;482.</p>
+            </div>
+          </article>
+
+          <article class="publication">
+            <span class="pub-year">2022</span>
+            <div>
+              <h3>
+                <a href="https://onlinelibrary.wiley.com/doi/10.1002/joom.1179" target="_blank" rel="noopener noreferrer">Task Management in Decentralized Autonomous Organization</a>
+              </h3>
+              <p><strong><em>Journal of Operations Management</em></strong> &middot; With Xi Zhao, Peilin Ai, Fujun Lai, and Jose Benitez &middot; Vol. 68, Issues 6&ndash;7, pp. 649&ndash;674.</p>
+            </div>
+          </article>
+
+          <article class="publication">
+            <span class="pub-year">2021</span>
+            <div>
+              <h3>
+                <a href="https://pubsonline.informs.org/doi/10.1287/isre.2021.1014" target="_blank" rel="noopener noreferrer">Understanding Inconsistent Employee Compliance with Information Security Policies Through the Lens of the Extended Parallel Process Model</a>
+              </h3>
+              <p><strong><em>Information Systems Research</em></strong> &middot; With Yan Chen, Dennis F. Galletta, Paul Benjamin Lowry, Gregory D. Moody, and Robert Willison &middot; Vol. 32, Issue 3, pp. 1043&ndash;1065.</p>
+            </div>
+          </article>
+
+          <article class="publication">
+            <span class="pub-year">2021</span>
+            <div>
+              <h3>
+                <a href="https://aisel.aisnet.org/jais/vol22/iss3/5/" target="_blank" rel="noopener noreferrer">Understanding Information Security Policy Violation from a Situational Action Perspective</a>
+              </h3>
+              <p><strong><em>Journal of the Association for Information Systems</em></strong> &middot; With Han Li and Yan Chen &middot; Vol. 22, Issue 3, pp. 739&ndash;772.</p>
+            </div>
+          </article>
+
+          <article class="publication">
+            <span class="pub-year">2020</span>
+            <div>
+              <h3>
+                <a href="https://doi.org/10.17705/1jais.00646" target="_blank" rel="noopener noreferrer">Why Individual Employees Commit Malicious Computer Abuse: A Routine Activity Theory Perspective</a>
+              </h3>
+              <p><strong><em>Journal of the Association for Information Systems</em></strong> &middot; With Han Li, Qing Hu, and Heng Xu &middot; Vol. 21, Issue 6, pp. 1552&ndash;1593.</p>
+            </div>
+          </article>
+
+          <article class="publication">
+            <span class="pub-year">2007</span>
+            <div>
+              <h3>
+                <a href="https://aisel.aisnet.org/jais/vol8/iss12/35/" target="_blank" rel="noopener noreferrer">A Scientometric Investigation into the Validity of IS Journal Quality Measures</a>
+              </h3>
+              <p><strong><em>Journal of the Association for Information Systems</em></strong> &middot; With Bruce R. Lewis and Gary F. Templeton &middot; Vol. 8, Issue 12, pp. 619&ndash;633.</p>
             </div>
           </article>
         </div>
